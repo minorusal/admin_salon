@@ -44,7 +44,7 @@ Created by: Mienard Lumaad (@themepixels)
 }
 .progress-login .progress{
 	
-	background-image: linear-gradient(to bottom, #0866c6, #f9f9f9);
+	background-image: linear-gradient(to bottom, #C7E2A1, #f9f9f9);
 }
 .fc-event {
   border: 1px solid #021E3A;
@@ -120,7 +120,7 @@ body {
 	background: url(../images/leftpanelbg.png) repeat-y 0 0; font-size: 12px;
 	font-family: 'RobotoRegular', 'Helvetica Neue', Helvetica, sans-serif; }
 body.errorpage { background: #fff url(../images/bg1.png);  }
-body.loginpage { background: #0866c6; }
+body.loginpage { background: #C7E2A1; }
 
 a,a:hover,a:link,a:active,a:focus { outline: none; color: #0866c6; text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -140,9 +140,9 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 .inputwrapper input { border: 0; padding: 10px; background: #fff; width: 250px; }
 .inputwrapper input:active, .inputwrapper input:focus { background: #fff; border: 0; }
 .inputwrapper button {
-		  display: block; border: 1px solid #0c57a3; padding: 10px; background: #0972dd; width: 100%;
+		  display: block; border: 1px solid #0c57a3; padding: 10px; background: #F7931D; width: 100%;
 		  color: #fff; text-transform: uppercase; }
-.inputwrapper button:focus, .inputwrapper button:active, .inputwrapper button:hover { background: #1e82e8; }
+.inputwrapper button:focus, .inputwrapper button:active, .inputwrapper button:hover { background: #F2C28C; }
 .inputwrapper label {
 		  display: inline-block; margin-top: 10px; color: rgba(255,255,255,0.8); font-size: 11px; vertical-align: middle; }
 .inputwrapper label input { width: auto; margin: -3px 5px 0 0; vertical-align: middle; }
@@ -178,9 +178,9 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 
 /*** HEADER ***/
 
-.header { background: #0866c6; clear: both; height: 142px; }
+.header { background: #0866c6; clear: both; height: 150px; }
 .headerinner { margin-left: 260px; }
-.header .logo { width: 260px; text-align: center; padding-top: 40px; float: left; }
+.header .logo { width: 260px; text-align: center; padding-top: 30px; float: left; }
 
 .headmenu { list-style: none; }
 .headmenu .dropdown-menu { border: 2px solid #0866c6; border-top: 0; margin: 0; }
