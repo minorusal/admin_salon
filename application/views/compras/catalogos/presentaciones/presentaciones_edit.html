@@ -1,0 +1,33 @@
+<div id="form_presentacion_edit" class="stdform stdform2">
+    <input id="id_presentacion" type="hidden" name="id_presentacion" value="{id_presentacion}" />
+    <p>
+        <label>{nombre_presentaciones}: (*)</label>
+        <span class="field"><input id="presentaciones" type="text" name="presentaciones" class="input-xlarge requerido" value="{presentaciones}" /></span>
+    </p>
+    <p>
+        <label>{cvl_corta}: (*)</label>
+        <span class="field"><input id="clave_corta" type="text" name="clave_corta" class="input-xlarge requerido" value="{clave_corta}" /></span>
+    </p>       
+    <p>
+        <label>{descrip}:</label>
+        <span class="field"><textarea id="descripcion" name="descripcion"  class="span5" style="resize: vertical; height: 100px;">{descripcion}</textarea></span>
+    </p>
+
+    <p>
+        <label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="timestamp" type="text" data-campo="timestamp" class="input-xlarge uneditable-input" readonly >{timestamp} </span></span>
+    </p>           
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_registro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{usuario_registro}</span></span>
+    </p>
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton"> 
+        {button_save}
+    </p>
+</div>

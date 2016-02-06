@@ -1,0 +1,139 @@
+<div id="formulario" class="stdform">
+    <div id="tbl1" class="span5" >
+        <table  class="table table-bordered table-invoice"> 
+            <tr>
+                <td class="width30">
+                <input id="id_compras_orden" type="hidden" data-campo="id_compras_orden" value="{id_compras_orden}" />
+                <input id="moneda" type="hidden" data-campo="moneda" value="{moneda}" />
+                <input id="estatus" type="hidden" data-campo="estatus" value="{estatus}" />
+                    <label>{orden_num}:</label>
+                </td >
+                <td><strong>{orden_num_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{orden_fecha}:</label>
+                </td>
+                <td><strong>{orden_fecha_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{sucursal}:</label>
+                </td>
+                <td><strong>{list_sucursales}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{entrega_fecha}:</label>
+                </td>
+                <td><strong>{entrega_fecha_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{forma_pago}:</label>
+                </td>
+                <td><strong>{list_forma_pago}</strong></td>
+            </tr>
+        </table>
+   </div>
+   <div class="span5">
+       <table width="100%" class="table table-bordered table-invoice">
+            <tr>
+                <td class="width30">
+                    <label>{no_factura}:</label>
+                </td>
+                <td>
+                    <input type="text" id="no_factura" data-campo="no_factura" class="input-small">
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{fecha_factura}:</label>
+                </td>
+                <td>
+                    <input id="fecha_factura" readonly="true" type="text"  data-campo="fecha_factura" name="fecha_factura" class="locked_active input-large fecha_factura requerido txt_fecha" />
+                </td>
+            </tr> 
+       </table>
+   </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="update_loader"></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <table class="table table-bordered" id="dyntable2" aria-describedby="dyntable2_info" style="margin-left: 0px; width: 100%; {style_table}">
+        <tr id="titulos">
+            <th> {#}</th>
+            <th>{proveedor}</th>
+            <th> {articulo}</th>
+            <th> {presentacion}</th>
+            <th> {costo_unitario}</th>
+            <th> {cantidad}</th>
+            <th> {costo_cantidad}</th>
+            <th> {descuento}</th>
+            <th> {subtotal}</th>
+            <th> {imp}</th>
+            <th> {valor_imp}</th>
+            <th> {total}</th>
+            <th> {aceptar}</th>
+        </tr>
+        {table}
+    </table>
+    <table id="table_listado" class="table table-bordered" style="display:none">
+        <tr>
+            <th class="head0 center">{#}</th>
+            <th class="head0">{proveedor}</th>
+            <th class="head0">{articulo}</th>
+            <th class="head0">{presentacion}</th>
+            <th class="head0 right">{lote}</th>
+            <th class="head0 center">{cantidad}</th>
+            <th class="head0 right">{fecha_caducidad}</th>
+            <th class="head0 right">{total}</th>
+            <th class="head0 right">{acciones}</th>
+        </tr>
+    </table>
+    <table class="table invoice-table" >
+        <tbody>
+            <tr>
+                <td class="width65 msg-invoice" style="border: 1px solid #ddd;">
+                    <h4><strong>{observaciones}:</strong></h4>
+                    <p>{observaciones_value} </p>
+                    <p>{fecha_registro}</p>
+                </td>
+                <td class="width15 right numlist">
+                    <strong>{subtotal}</strong>
+                    <strong>{descuento}</strong>
+                    <strong>{impuesto}</strong>
+                </td>
+                <td class="width20 right numlist">
+                    <span id="value_subtotal"><strong>0</strong></span>
+                    <span id="value_descuento"><strong>0</strong></span>
+                    <span id="value_impuesto"><strong>0</strong></span>
+                    <input id="subtotal" type="hidden" data-campo="subtotal" value="" />
+                    <input id="descuento_total" type="hidden" data-campo="descuento_total" value="" />
+                    <input id="impuesto_total" type="hidden" data-campo="impuesto_total" value="" />
+                    <input id="total_data" type="hidden" data-campo="total" value="" />
+                </td>
+            </tr>
+        </tbody>
+      </table>   
+
+      <table class="table invoice-table" >
+        <tbody>
+            <tr>
+                <td class="width65 msg-invoice" style="border: 1px solid #ddd;">
+                    <h4><strong>{comentarios_entrada}:</strong></h4>
+                    <textarea id="comentario" data-campo="comentario" class="span8 requerido" style="resize: vertical; height: 100px;"></textarea>
+                </td>
+            </tr>
+        </tbody>
+      </table>  
+        <div id="update_loader"></div>
+        <div id="mensajes" style="display:none"></div>
+      <div class="amountdue" >
+            <h1><span>{a_pagar}:</span><span id="value_total" style="font-size:.7em;"><span></h1> <br />
+            <span id="recibir" class="btn btn-primary btn-large" onclick="recibir_orden();" style="background-color:#006F00; border-color:#006F00;"><span class="ico_blanco fa fa-check">&nbsp;</span>{recibir_enetrada}</span>
+            <br/>
+            <span id="volver" class="btn btn-primary btn-large" onclick="volver_orden();" style="background-color:#9D0000; border-color:#9D0000;"><span class="ico_blanco fa fa-times">&nbsp;</span>{rechazar_entrada}</span>
+      </div>
+    <div id="mensajes" style="display:none"></div>
+    <div id="modal"></div>
+</div>

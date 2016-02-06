@@ -1,0 +1,26 @@
+/*Go Top Icon*/
+.scrollToTop{
+  width:8%; 
+  height:10%;
+  min-width: 3%;
+  /*border: 3px solid #333;*/
+  text-align:center; 
+  background: whiteSmoke;
+  position:fixed;
+  bottom:8px;
+  right:20px;
+  display:none;
+  background:url(../images/gotop_default.png) no-repeat center;
+  background-size: 88%;
+  max-width: 80px;
+  overflow: hidden;
+  /*Transparencia*/
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  -moz-opacity:0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}

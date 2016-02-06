@@ -1,0 +1,31 @@
+<div id="form_perfil_edit" class="stdform stdform2" >
+    <input id="id_perfil" type="hidden" name="id_perfil" data-campo="id_perfil" value="{id_perfil}" />
+    <p>
+        <label>{lbl_perfil}: (*)</label>
+        <span class="field"><input id="txt_perfil" type="text" name="txt_perfil" data-campo="txt_perfil" class="input-xlarge requerido" value="{txt_perfil}" /></span>
+    </p>  
+    <p>
+        <label>{lbl_clave_corta}: (*)</label>
+        <span class="field"><input id="txt_clave_corta" type="text" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-xlarge requerido" value="{txt_clave_corta}" /></span>
+    </p>   
+    <p>
+        <label>{lbl_descripcion}:</label>
+        <span class="field"><textarea id="txt_descripcion" name="txt_descripcion" data-campo="txt_descripcion" class="span5" style="resize: vertical; height: 100px;">{txt_descripcion}</textarea></span>
+    </p>
+    <p>
+        <label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" data-campo="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+    <span class="field">{tree_view}</span>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+        {button_save}
+</div>

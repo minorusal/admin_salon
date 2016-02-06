@@ -1,0 +1,64 @@
+<tr id="{id_compras_articulo_precios}">
+	<td class="center consecutivo">
+				<span name="consecutivo">{consecutivo}</span>
+			</td>
+	<td>
+		<span name="proveedor">{nombre_comercial}</span>
+		<input type="hidden" value="{id_compras_articulo_precios}" data-campo="id_compras_articulo_precios[{id_compras_articulo_precios}]" id="idarticuloprecios_{id_compras_articulo_precios}">
+	</td>
+	<td>
+		<ul class="tooltips">
+			<a href"#" style="cursor:pointer" onclick="detalle_articulos_precio({id_compras_articulo_precios})" data-placement="right" data-rel="tooltip" data-original-title="Ver detalle" rel="tooltip">{articulo}<br/>{upc}</a>
+		</ul>
+	</td>
+	<td>
+		{cl_presentacion}
+	</td>
+	<td class="right">
+		<input type="hidden" id="costo_sin_impuesto_{id_compras_articulo_precios}" value="{costo_sin_impuesto}">
+		<span class="add-on">{moneda}</span>
+		{costo_sin_impuesto}
+	</td>
+	<td class="right">
+		<div class="input-prepend input-append">
+			<input type="text"  value ="1" id="cantidad_{id_compras_articulo_precios}" data-campo="cantidad[{id_compras_articulo_precios}]" class="input-small numerico" onkeyup="calcula_costo2({id_compras_articulo_precios})" style="width: 40px;">
+			<span class="add-on">Pz</span>
+		</div>
+	</td>
+	<td class="right">
+		<input type="hidden" name="costo_x_cantidad_hidden[]" id="costo_x_cantidad_hidden{id_compras_articulo_precios}" value="" data-campo="costo_x_cantidad_hidden[{id_compras_articulo_precios}]">
+		<span class="add-on">{moneda}</span>
+		<span id="costo_x_cantidad{id_compras_articulo_precios}"></span>
+	</td>
+	<td class="right">
+		<div class="input-prepend input-append">
+			<input type="text"  name="descuento[]" id="descuento_{id_compras_articulo_precios}" data-campo="descuento[{id_compras_articulo_precios}]" class="input-small numerico" onkeyup="calcula_subtotal({id_compras_articulo_precios})" value="0" style="width: 25px;">
+			<span class="add-on">%</span>
+		</div>
+	</td>
+	<td class="right">
+		<input type="hidden" name="subtotal__hidden[]" id="subtotal__hidden{id_compras_articulo_precios}" data-campo="subtotal__hidden[{id_compras_articulo_precios}]">
+		<span class="add-on">{moneda}</span>
+		<span id="subtotal_{id_compras_articulo_precios}"></span>
+	</td>
+	<td class="right">
+		<input type="hidden" value="{impuesto}" data-campo="impuesto[{id_compras_articulo_precios}]" id="impuesto_{id_compras_articulo_precios}"name="impuesto[{id_compras_articulo_precios}]">
+		{impuesto}
+		<span class="add-on">%</span>
+	</td>
+	<td class="right">
+		<input type="hidden" name="valor_hidden_impuesto[]" value="" id="valor_hidden_impuesto_{id_compras_articulo_precios}" data-campo="valor_hidden_impuesto[{id_compras_articulo_precios}]">
+		<span class="add-on">{moneda}</span>
+		<span id="valor_impuesto_{id_compras_articulo_precios}"></span>
+	</td>
+	<td class="right">
+		<strong>
+		<input type="hidden" value="" id="total_hidden_{id_compras_articulo_precios}" data-campo="total_hidden[{id_compras_articulo_precios}]">
+		<span class="add-on">{moneda}</span>
+		<span id="total_{id_compras_articulo_precios}"></span>
+		<strong>
+	</td>
+	<td class="center">
+		{acciones}
+	</td>
+</tr>

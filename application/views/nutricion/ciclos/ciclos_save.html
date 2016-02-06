@@ -1,0 +1,43 @@
+
+<div id="formulario" class="stdform stdform2">
+	<p>
+        <label>{lbl_tipo_insert}</label>
+        <span class="field">
+        	<span><input id="tipo" type="radio"  data-campo="tipo"  name="tipo" value="auto" checked></span>
+        	{lbl_auto} 
+        	<span><input id="tipo" type="radio"  data-campo="tipo"  name="tipo" value="manual" ></span>
+        	{lbl_manual}
+        </span>
+    </p>
+    <p class="auto">
+		<label>{lbl_cantidad_ciclo} (*)</label>
+		<span class="field">
+			<input id="txt_cantidad_ciclo" type="text" data-campo="txt_cantidad_ciclo" name="txt_cantidad_ciclo" class="input-small requerido numerico" value="" />
+		</span>
+	</p>
+	<p class="manual">
+		<label>{lbl_nombre_ciclo} (*)</label>
+		<span class="field">
+			<input id="txt_ciclo" type="text" data-campo="txt_ciclo" name="txt_ciclo" class="input-xlarge requerido" value="" />
+		</span>
+	</p>
+	<p class="manual">
+		<label>{lbl_clave_corta} (*)</label>
+		<span class="field">
+			<input id="txt_clave_corta" type="text" data-campo="txt_clave_corta" name="txt_clave_corta" class="input-xlarge requerido" value="" />
+		</span>
+	</p>
+	<p>
+		<label>{lbl_sucursal} (*)</label>
+		<span class="field">
+			{list_sucursales} 
+		</span>
+	</p>
+	<div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+	<span class="field">
+		{btn_save}
+		{btn_reset}
+	</span>
+</div>
+

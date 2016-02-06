@@ -1,0 +1,79 @@
+<tr id="{id_compras_orden_articulo}">
+	<td class="center">
+		<span name="consecutivo">{consecutivo}</span>
+		<input type="hidden" id="id_compras_articulo" data-campo="id_compras_articulo[{id_compras_orden_articulo}]" value="{id_compras_articulo}">
+
+		
+		<input type="hidden" id="id_articulo_tipo" data-campo="id_articulo_tipo[{id_compras_orden_articulo}]" value="{id_articulo_tipo}">
+		<input type="hidden" id="id_compras_um" data-campo="id_compras_um[{id_compras_orden_articulo}]" value="{id_compras_um}">
+		<input type="hidden" data-campo="lote_val[{id_compras_orden_articulo}]" name="lote_val" id="lote_val_{id_compras_orden_articulo}"/>
+		<input type="hidden" data-campo="caducidad_val[{id_compras_orden_articulo}]" name="caducidad_val" id="caducidad_val_{id_compras_orden_articulo}"/>
+		<input type="hidden" data-campo="cantidad_lote[{id_compras_orden_articulo}]" name="cantidad_lote" id="cantidad_lote_{id_compras_orden_articulo}"/>
+		<input type="hidden" id="um_x_embalaje" data-campo="um_x_embalaje[{id_compras_orden_articulo}]" value="{um_x_embalaje}">
+		<input type="hidden" id="um_x_presentacion" data-campo="um_x_presentacion[{id_compras_orden_articulo}]" value="{um_x_presentacion}">	
+		<input type="hidden" id="unidad_minima" data-campo="unidad_minima[{id_compras_orden_articulo}]" value="{unidad_minima}">
+		<input type="hidden" id="cl_um" data-campo="cl_um[{id_compras_orden_articulo}]" value="{cl_um}">
+
+	</td>
+	<td>
+		<span name="proveedor">{nombre_comercial}</span>
+		<input type="hidden" value="{id_compras_orden_articulo}" data-campo="id_compras_orden_articulo[{id_compras_orden_articulo}]" id="idarticuloprecios_{id_compras_orden_articulo}"/>
+		<input type="hidden" id="proveedor_{id_compras_orden_articulo}" value="{nombre_comercial}">
+	</td>
+	<td>
+		<input type="hidden" id="articulo_{id_compras_orden_articulo}" value="{articulo} - {peso_unitario} {cl_um} {upc}">
+		<ul class="tooltips">
+			<span>{articulo} {upc}</span>
+		</ul>
+	</td>
+	<td>
+		{presentacion_x_embalaje} {presentacion}
+		<input type="hidden" id="presentacion_{id_compras_orden_articulo}" value="{presentacion_x_embalaje} {presentacion}">
+	</td>
+	<td class="right">
+		<input type="hidden" id="costo_sin_impuesto_{id_compras_orden_articulo}" value="{costo_sin_impuesto}"/>
+		<span class="add-on">{moneda}</span> {number_costo_sin_impuesto}
+	</td>
+	<td class="right">
+			<input type="hidden" id="cantidad_{id_compras_orden_articulo}" value="{cantidad}" data-campo="cantidad[{id_compras_orden_articulo}]"/>
+			<input type="hidden" id="cantidad_resta_{id_compras_orden_articulo}" value="{cantidad}" data-campo="cantidad_resta[{id_compras_orden_articulo}]"/>
+			<span id="cantidad_origen_{id_compras_orden_articulo}"><b>{number_cantidad} Pz<b></span>
+	</td>
+	<td class="right">
+		<input type="hidden" name="costo_x_cantidad_hidden[]" id="costo_x_cantidad_hidden{id_compras_orden_articulo}" value="{costo_x_cantidad}" data-campo="costo_x_cantidad_hidden[{id_compras_orden_articulo}]"/>
+		<span class="add-on">{moneda}</span> 
+		<span id="costo_x_cantidad{id_compras_orden_articulo}">{number_costo_x_cantidad}</span>
+	</td>
+	<td class="right">
+          	<input type="hidden" name="descuento[]" id="descuento_{id_compras_orden_articulo}" value="{descuento}" data-campo="descuento[{id_compras_orden_articulo}]"/>
+         	<span>{number_descuento} %</span>
+	</td>
+	<td class="right">
+		<input type="hidden" class="subtotal" name="subtotal__hidden[]" id="subtotal__hidden{id_compras_orden_articulo}" value ="{subtotal}"data-campo="subtotal__hidden[{id_compras_orden_articulo}]"/>
+          <span class="add-on">{moneda}</span> 
+          <span id="subtotal_{id_compras_orden_articulo}">{number_subtotal}</span>
+	</td>
+	<td class="right">
+		<input type="hidden" value ="{impuesto_porcentaje}" data-campo="impuesto[{id_compras_orden_articulo}]" id="impuesto_{id_compras_orden_articulo}"name="impuesto[{id_compras_orden_articulo}]" />
+		{number_impuesto_porcentaje}
+		<span class="add-on">%</span>
+	</td>
+	<td class="right">
+		<input type="hidden" value="{valor_impuesto}" name="valor_hidden_impuesto[]" id="valor_hidden_impuesto_{id_compras_orden_articulo}" data-campo="valor_hidden_impuesto[{id_compras_orden_articulo}]"/>
+		<span class="add-on">{moneda}</span> 
+		<span id="valor_impuesto_{id_compras_orden_articulo}">{number_valor_impuesto}</span>
+	</td>
+	<td class="right">
+		<strong>
+		<input type="hidden" value="{total}" id="total_hidden_{id_compras_orden_articulo}" data-campo="total_hidden[{id_compras_orden_articulo}]"/>
+		<span class="add-on">{moneda}</span> 
+		<span id="total_{id_compras_orden_articulo}">{number_total}</span>
+		</strong>
+	</td>
+	<td class="center"><input type="checkbox" class="requerido" id="listado_{id_compras_orden_articulo}" data-campo="aceptar[{id_compras_orden_articulo}]"  name="aceptar[]"  onclick="mostrar_modal({id_compras_orden_articulo})"value="{id_compras_orden_articulo}">
+	
+	<input type="hidden" value="{id_compras_articulo_presentacion}" name="id_compras_articulo_presentacion[]" id="id_compras_articulo_presentacion{id_compras_orden_articulo}" data-campo="id_compras_articulo_presentacion[{id_compras_orden_articulo}]"/>
+	</td>
+</tr>
+<input type="hidden" id="id_compras_articulo_precios" data-campo="id_compras_articulo_precios[{id_compras_orden_articulo}]" value="{id_compras_articulo_precios}">
+		

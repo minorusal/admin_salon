@@ -1,0 +1,34 @@
+
+<div id="formulario_articulo_insert" class="stdform stdform2">
+        <p>
+            <label>{articulo_tipo}: (*)</label>
+            <span class="field">{list_articulo_tipo}</span>
+        </p>
+        <p>
+            <label>{nombre_articulo}: (*)</label>
+            <span class="field"><input id="articulo" type="text" name="articulo" data-campo="articulo" class="input-large requerido" value="" /></span>
+        </p>
+        <p>
+            <label>{cvl_corta}: (*)</label>
+            <span class="field"><input id="clave_corta" type="text" name="clave_corta" data-campo="clave_corta" class="input-large requerido" value="" /></span>
+        </p>
+        <p>
+            <label>{linea}: (*)</label>
+            <span class="field">{list_linea}</span>
+        </p>
+        <p>
+            <label>{um}: (*)</label>
+            <span class="field">{list_um}</span>
+        </p>
+        <p>
+            <label>{descripcion}:</label>
+            <span class="field"><textarea id="descripcion" name="descripcion" data-campo="descripcion"  class="span5" style="resize: vertical; height: 100px;"></textarea></span>
+        </p>
+
+        <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+        <p class="stdformbutton"> 
+            {button_save}
+            {button_reset}
+        </p>
+</div>

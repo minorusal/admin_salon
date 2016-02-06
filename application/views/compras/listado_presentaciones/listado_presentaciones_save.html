@@ -1,0 +1,63 @@
+
+<div id="form_presentaciones_save" class="stdform stdform2">  
+
+    <p>
+        <label>{upc}: </label>
+        <span class="field"><input id="upc" maxlength="13" type="text" name="upc" data-campo="upc" class="input-large requerido numerico_int"/></span>
+    </p>
+    <p>
+        <label>{articulo} (*)</label>
+        <span class="field">{lts_articulos}</span>
+    </p>
+    <p>
+        <label>{marcas} (*)</label>
+        <span class="field">{lts_marcas}</span>
+    </p>
+    <p>
+        <label>{presentaciones} (*)</label>
+        <span class="field">{lts_presentaciones}</span>
+    </p>  
+    <p>
+        <label>{peso_unitario}: (*)</label>   
+        <span class="field">     
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="peso_unitario" type="text" name="peso_unitario" data-campo="peso_unitario" class="input-small numerico requerido"/>
+        <span id="lbl_peso" style="display:none"></span></span>
+    </p>    
+    <p id="impuesto_aplica_p">
+        <label>{impuesto_aplica}:</label>
+        <span class="field">
+        <input type="checkbox" id="impuesto_aplica" name="impuesto_aplica" data-campo="impuesto_aplica" onclick="oculta_impuesto()"></span>
+    </p>
+    <p>
+        <div id="impuesto" style="display:none;">
+            <label>{impuesto_porcentaje}: (*)</label>
+            <span class="field">{lts_impuesto}</span>
+        </div>
+    </p>       
+    <p id="precio_publico_p">
+        <label>{precio_publico}: (*)</label>
+        <span class="field">
+        &nbsp;&nbsp;<span>{moneda}</span>
+        <input id="precio_publico" type="text" name="precio_publico" data-campo="precio_publico" class="input-small requerido numerico" onkeyup="calcula_precio_publico();"/>
+    </p>
+    <p id="precio_publico_con_impuesto_p">
+        <label>{precio_publico_con_impuesto}: (*)</label>
+        <span class="field">
+        &nbsp;&nbsp;<span>{moneda}</span>
+        <input id="precio_publico_con_impuesto" type="text" name="precio_publico_con_impuesto" data-campo="precio_publico_con_impuesto" class="input-small requerido numerico"/>
+    </p>
+    <p>
+        <div id="div_rendimiento">
+            <label>{rendimiento}: (*)</label>
+            <span class="field">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="rendimiento" type="text" name="rendimiento" data-campo="rendimiento" class="input-small requerido numerico"/>
+            &nbsp;<span>%</span></span>
+        </div>
+    </p>
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+     <p class="stdformbutton"> 
+        {button_save}
+        {button_reset}
+    </p>
+</div>

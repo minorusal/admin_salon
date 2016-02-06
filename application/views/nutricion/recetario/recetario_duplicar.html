@@ -1,0 +1,53 @@
+<div id="form_recetario_duplicador" class="stdform stdform2">
+	<p>
+        <label>{lbl_tipo_duplicado}</label>
+        <span class="field">
+        	<span><input id="tipo" type="radio"  data-campo="tipo"  name="tipo" value="{receta}" checked></span>
+        	{lbl_receta} 
+        	<span><input id="tipo" type="radio"  data-campo="tipo"  name="tipo" value="{familia}" ></span>
+        	{lbl_familia}
+        </span>
+    </p>
+    
+    <!-- <p class="text-info"><span class="field">{origen}</span></p> -->
+    
+    <p class="receta">
+    	<label>{origen} (*):</label>
+    	<span class="field">
+			{list_sucursales_receta}
+		</span>
+    </p>
+    <p id="recetas_list" class="receta">
+    	<label>{lbl_recetas} (*):</label>
+    	<span class="field">
+			{list_recetas}
+		</span>
+    </p>
+    <p class="familia">
+    	<label>{lbl_sucursales} (*):</label>
+    	<span class="field">
+			{list_sucursales_familia}
+		</span>
+    </p>
+    <p id="familias_list" class="familia">
+    	<label>{lbl_familias} (*):</label>
+    	<span class="field">
+			{list_familias}
+		</span>
+    </p>
+
+    <!-- <p class="text-info"><span class="field">{destino}</span></p> -->
+
+    <p>
+    	<label>{destino} (*):</label>
+    	<span class="field">
+			{list_sucursales_destino}
+		</span>
+    </p>
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+    <p class="stdformbutton">
+        {button_duplicar}
+        {button_reset}
+    </p>
+</div>

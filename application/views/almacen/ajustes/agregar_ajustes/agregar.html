@@ -1,0 +1,96 @@
+<div id="formulario" class="stdform">    
+   <table class="table table-bordered">
+        <tr>
+            <th>
+                {configuracion}
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div id="embajale">
+                    <label><strong>{lbl_almacen} (*)</strong></label>
+                    <span class="field">{lts_almacen}</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="embajale">
+                <label><strong>{lbl_pasillo}</strong></label>
+                <span class="field" id="lts_pasillo"></span>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="embajale">
+                <label><strong>{lbl_gaveta}</strong></label>
+                <span class="field" id="lts_gavetas"></span>
+            </div>
+            </td>
+        </tr>
+   </table>
+    <br>
+   <div id="lts_ajustes">
+   </div>
+   <div id="lts_presentacion">
+   </div>
+   <input type="hidden" id="id_compras_articulo_precios" value="">
+    <br>
+    <div id="tbl1" class="span5">
+        <table  class="table table-bordered table-invoice"> 
+            <tr>
+                <td class="width30">
+                    <label>{lblstock}:</label>
+                </td >
+                <td>
+                    <div id="value_stock"><strong></strong>
+                    </div>
+                    <input type="hidden" id="stock_num" value="" data-campo="stock_num">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{stock_um_lbl}:</label>
+                </td>
+                <td>
+                    <div id="value_stock_um">
+                        <strong></strong>
+                    </div>
+                    <input type="hidden" id="stock_num_um">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><strong>{lbl_stock_mov}: </strong></label>
+                </td>
+                <td valign="middle">
+                        <input type="text" id="stock_destino" name="stock_destino" data-campo="stock_destino" class="numerico requerido" onkeyup="realiza_calculos(1);" style="
+                        width:90px;">
+                        <span id="um"></span>
+                        <input type="hidden" id="stock" value="" class="requerido" data-campo="stock">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><strong>{lbl_stock_um_mov}: </strong></label>
+                </td>
+                 <td valign="middle">
+                        <input type="text" id="stock_um_destino" name="stock_um_destino" data-campo="stock_um_destino" class="numerico requerido" onkeyup="realiza_calculos(2);" style="width:90px;">
+                        <span id="um_minima"></span>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+   </div>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="update_loader"></div>
+    <div id="mensajes_update" style="display:none"></div>  
+
+     <div
+     <p class="stdformbutton"> 
+        {button_save}
+    </p>
+    </div>
+</div>

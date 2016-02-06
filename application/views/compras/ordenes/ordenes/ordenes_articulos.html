@@ -1,0 +1,162 @@
+{data_css}{estilo_extra}
+<div id="formulario_listado" class="stdform">
+    <div id="tbl1" class="span5" >
+        <table class="table table-bordered table-invoice"> 
+            <tr>
+                <td class="width30">
+                <input id="id_compras_orden" type="hidden" data-campo="id_compras_orden" value="{id_compras_orden}" />
+                <input id="moneda" type="hidden" data-campo="moneda" value="{moneda}" />
+                <input id="estatus" type="hidden" data-campo="estatus" value="{estatus}" />
+                    <label>{orden_num}:</label>
+                </td >
+                <td><strong>{orden_num_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{orden_tipo}:</label>
+                </td>
+                <td><strong>{list_orden_tipo}</strong></td>
+            </tr>
+            <tbody  id="proveedores" {style}>
+                <tr>
+                    <td class="width30">
+                        <!--<div id="proveedores" {style}>-->
+                            <label>{proveedor}:</label>
+                        <!--</div>-->
+                    </td>
+                    <td><strong>{list_proveedores}</strong></td>
+                </tr>
+            </tbody>
+            <tr>
+                <td class="width30">
+                    <label>{sucursal}:</label>
+                </td>
+                <td><strong>{list_sucursales}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{entrega_fecha}:</label>
+                </td>
+                <td><strong>{entrega_fecha_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{credito}</label>
+                </td>
+                <td><strong>{list_creditos}</strong></td>
+            </tr>
+        </table>
+   </div>
+   <div id="tbl2" class="span5">
+       <table class="table table-bordered table-invoice">
+            <tr>
+                <td class="width30">
+                    <label>{orden_fecha}:</label>
+                </td>
+                <td><strong>{orden_fecha_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{descripcion}:</label>
+                </td>
+                <td><strong>{descripcion_value}</strong></td>
+            </tr>
+            <tbody id="prefactura"  {style}>
+                <tr>
+                    <td class="width30">
+                        <!--<div id="prefactura"  {style}>-->
+                            <label>{prefactura_num}:</label>
+                        <!--</div>-->
+                    </td>
+                    <td><strong>{prefactura_num_value}</strong></td>
+                </tr>
+            </tbody>
+            <tr>
+                <td class="width30">
+                    <label>{entrega_direccion}:</label>
+                </td>
+                <td><strong>{entrega_direccion_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{forma_pago}:</label>
+                </td>
+                <td><strong>{list_forma_pago}</strong></td>
+            </tr>            
+            <tr>
+                <td class="width30">
+                    <label>{estatus}:</label>
+                </td>
+                <td><strong>{estatus_value}</strong></td>
+            </tr>
+       </table>
+   </div>
+    <div style="clear:both; width:100%; text-align:center; padding: 20px;">
+        <table style="margin: 0 auto; text-align: left;" >
+            <tr>
+                <td >{lst_articulos_label}</td>
+                <td >{list_arti}</td>
+            </tr>
+        </table>        
+    </div>
+    <div id="update_loader"></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <div id="articulos_detalle">
+    <div id="formulario_listado" class="stdform">
+        <table class="table table-bordered table-invoice-full" id="dyntable2" aria-describedby="dyntable2_info" style="margin-left: 0px; width: 100%; {style_table}">
+            <tr>
+                <th class="head0 center">{consecutivo}</th>
+                <th class="head0">{proveedor}</th>
+                <th class="head0">{articulo}</th>
+                <th class="head0">{presentacion}</th>
+                <th class="head0 right">{costo_unitario}</th>
+                <th class="head0 center">{cantidad}</th>
+                <th class="head0 right">{costo_cantidad}</th>
+                <th class="head0 center">{descuento}</th>
+                <th class="head0 right">{subtotal}</th>
+                <th class="head0 right">{imp}</th>
+                <th class="head0 right">{valor_imp}</th>
+                <th class="head0 right">{total}</th>
+                <th class="head0 center">{accion}</th>
+            </tr>
+            {table}
+        </table>
+    </div>
+
+    <table class="table invoice-table">
+        <tbody>
+            <tr>
+                <td class="width65 msg-invoice" style="border: 1px solid #ddd;">
+                    <h4><strong>{observaciones}:</strong></h4>
+                    <p>{observaciones_value} </p>
+                </td>
+                <td class="width15 right numlist">
+                      <strong>{subtotal}</strong>
+                    <strong>{descuento}</strong>
+                    <strong>{impuesto}</strong>
+                </td>
+                <td class="width20 right numlist">
+                    <span id="value_subtotal"><strong>{subtotal_value}</strong></span>
+                    <span id="value_descuento"><strong>{descuento_value}</strong></span>
+                    <span id="value_impuesto"><strong>{impuesto_value}</strong></span>
+                    <input id="subtotal" type="hidden" data-campo="subtotal" value="{subtotal_data}" />
+                    <input id="descuento_total" type="hidden" data-campo="descuento_total" value="{descuento_data}" />
+                    <input id="impuesto_total" type="hidden" data-campo="impuesto_total" value="{impuesto_data}" />
+                    <input id="total_data" type="hidden" data-campo="total_data" value="{total_data}" />
+                </td>
+            </tr>
+        </tbody>
+      </table> 
+      </div>       
+      <div class="amountdue" >
+        <h1>
+            <span>{a_pagar}:</span>
+            <span id="value_total" style="font-size:.7em;"><strong>{total_value}</strong>
+            </span>
+        </h1> <br/>
+        <span id="cerrar" class="btn btn-primary btn-large" onclick="cerrar_orden_listado();" style="background-color:#006F00; border-color:#006F00;"><span class="ico_blanco fa fa-check">&nbsp;</span>{cerrar_orden}</span>
+        <br/>
+        <span id="cancelar" class="btn btn-primary btn-large" onclick="cancelar_orden_listado();" style="background-color:#9D0000; border-color:#9D0000;"><span class="ico_blanco fa fa-times">&nbsp;</span>{cancelar_orden}</span>
+      </div>
+    <div id="mensajes" style="display:none"></div>
+</div>

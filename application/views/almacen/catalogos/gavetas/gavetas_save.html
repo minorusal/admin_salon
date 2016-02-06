@@ -1,0 +1,28 @@
+<div id="formulario" class="stdform stdform2">
+    <p>
+        <label>{lbl_gavetas}: (*)</label>
+        <span class="field"><input id="gavetas" type="text" name="gavetas" class="input-xlarge requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_clave_corta}: (*)</label>
+        <span class="field"><input id="clave_corta" type="text" name="clave_corta" class="input-xlarge requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_almacen}: (*)</label>
+        <span class="field">{list_almacen}</span>
+    </p>
+    <p>
+        <label>{lbl_pasillo}:</label>
+        <span class="field">{list_pasillo}</span>
+    </p>
+    <p>
+        <label>{lbl_descripcion}:</label>
+        <span class="field"><textarea id="descripcion" name="descripcion"  class="span5" style="resize: vertical; height: 100px;"></textarea></span>
+    </p>
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+    <p class="stdformbutton">
+        {button_save}
+        {button_reset}
+    </p>
+</div>

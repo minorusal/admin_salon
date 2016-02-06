@@ -1,0 +1,56 @@
+<script type='text/javascript'>
+	jQuery(document).ready(function() {
+		var date     = new Date();
+		var d        = date.getDate();
+		var m        = date.getMonth();
+		var y        = date.getFullYear();
+		var calendar = jQuery('#calendar').fullCalendar({
+			monthNames      : months_timepicker,
+	        monthNamesShort : months_timepicker,
+	        dayNames        : days_timepicker,
+	        dayNamesShort   : days_timepicker,
+	        dayNamesMin     : days_timepicker,
+	        header: {
+				left   : 'prev,next,today',
+				center : 'title',
+				right  : 'month,agendaWeek,agendaDay'
+			},
+			buttonText:{
+				prev      : "<span class='fc-text-arrow'>&lsaquo;</span>",
+				next      : "<span class='fc-text-arrow'>&rsaquo;</span>",
+				prevYear  : "<span class='fc-text-arrow'>&laquo;</span>",
+				nextYear  : "<span class='fc-text-arrow'>&raquo;</span>",
+				today     : calendar_today,
+				month     : calendar_month,
+				week      : calendar_week,
+				day       : calendar_day
+			},
+			selectable: false,
+			selectHelper: false,
+			eventRender: function(event, element) {                                          
+				element.find('span.fc-event-title').html(element.find('span.fc-event-title').text());					  
+			},
+			select: function(start, end, allDay) {
+				var title = prompt('Event Title:');
+				if (title) {
+					calendar.fullCalendar('renderEvent',
+						{
+							title: title,
+							start: start,
+							end: end,
+							allDay: allDay
+						},
+						true 
+					);
+				}
+				calendar.fullCalendar('unselect');
+			},
+			editable: false,
+			events: [
+				{json}
+			]
+		});
+	});
+</script>
+
+<div id='calendar'></div>

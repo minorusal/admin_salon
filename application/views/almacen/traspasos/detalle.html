@@ -1,0 +1,134 @@
+<div id="formulario" class="stdform">
+    <div id="tbl1" class="span5" >
+        <table  class="table table-bordered table-invoice"> 
+            <tr>
+                <td class="width30">
+                    <input type="hidden" id="id_stock" value="{id_stock}" name="id_stock" data-campo="id_stock">
+                    <input type="hidden" id="id_compras_orden_articulo" value="{id_compras_orden_articulo}" name="id_compras_orden_articulo" data-campo="id_compras_orden_articulo">
+                    <input type="hidden" id="id_almacen_entradas_recepcion" value="{id_almacen_entradas_recepcion}" name="id_almacen_entradas_recepcion" data-campo="id_almacen_entradas_recepcion">
+                    <input type="hidden" id="id_articulo_tipo" value="{id_articulo_tipo}" name="id_articulo_tipo" data-campo="id_articulo_tipo">
+                    <label>{upc_lbl}:</label>
+                </td >
+                <td><strong>{upc}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{sku_lbl}:</label>
+                </td>
+                <td><strong>{sku}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{marca_lbl}:</label>
+                </td>
+                <td><strong>{marca}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{presentacion_lbl}:</label>
+                </td>
+                <td><strong>{presentacion}</strong></td>
+            </tr>
+        </table>
+   </div>
+   <div class="span5">
+       <table class="table table-bordered table-invoice">            
+            <tr>
+                <td class="width30">
+                    <label>{lote_lbl}:</label>
+                </td>
+                <td>
+                    <input type="text" id="lote" value="{lote}" name="lote" data-campo="lote" readonly style="width:90px;">
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{caducidad_lbl}:</label>
+                </td>
+                <td>
+                    <input type="text" id="caducidad" value="{caducidad}" name="caducidad" data-campo="caducidad" readonly style="width:90px;">
+                </td>
+            </tr> 
+       </table>
+   </div>
+   <br>
+   <br>
+   <br>
+   <table class="table table-bordered">
+        <tr>
+            <th>
+                {origen}
+            </th>
+            <th>
+                {destino}
+            </th>
+        </tr>
+        <tr>
+             <td valign="middle">
+                    <label><strong>{stock_lbl}: </strong></label>
+                    <span class="field">{stock}</span>
+                    <input type="hidden" id="stock_origen" value="{stock}" name="stock_origen" data-campo="stock_origen" />
+            </td>
+            <td>
+                    <label><strong>{stock_lbl}: </strong></label>
+                    <input type="text" id="stock" value="{stock}" name="stock" data-campo="stock" class="numerico" style="width:90px;" onkeyup="calcula_stock_um();" />
+            </td>
+        </tr>
+        <tr>
+             <td valign="middle">
+                    <label><strong>{stock_um_lbl}: </strong></label>
+                    <span class="field">{stock_um} {unidad_minima_cve}</span>
+                    <input type="hidden" id="stock_um_origen" value="{stock_um}" name="stock_um_origen" data-campo="stock_um_origen" />
+            </td>
+            <td>
+                    <label><strong>{stock_um_lbl}: </strong></label>
+                    <input type="text" id="stock_um_destino" value="{stock_um}" name="stock_um_destino" data-campo="stock_um_destino" class="numerico" style="width:90px;" onkeyup="calcula_stock_pz();"> {unidad_minima_cve}
+            </td>
+        </tr>
+        <tr>
+             <td>
+                    <label><strong>{almacen_origen_lbl}: </strong></label>
+                    <span class="field">{almacenes}</span>
+                    <input type="hidden" id="id_almacen_origen" value="{id_almacen_origen}" name="id_almacen_origen" data-campo="id_almacen_origen" />
+            </td>
+            <td>
+                <div id="embajale">
+                    <label><strong>{almacen_lbl} (*)</strong></label>
+                    <span class="field">{lts_almacen}</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label><strong>{pasillo_origen_lbl}: </strong></label>
+                <span class="field">{pasillos}</span>
+                <input type="hidden" id="id_pasillo_origen" value="{id_pasillo_origen}" name="id_pasillo_origen" data-campo="id_pasillo_origen" />
+            </td>
+            <td>
+                <div id="embajale">
+                <label><strong>{pasillo_lbl}</strong></label>
+                <span class="field" id="lts_pasillo"></span>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label><strong>{gaveta_origen_lbl}: </strong></label>
+                <span class="field">{gavetas}</span>
+                <input type="hidden" id="id_gaveta_origen" value="{id_gaveta_origen}" name="id_gaveta_origen" data-campo="id_gaveta_origen" />
+            </td>
+            <td>
+                <div id="embajale">
+                <label><strong>{gaveta_lbl} (*)</strong></label>
+                <span class="field" id="lts_gavetas"></span>
+            </div>
+            </td>
+        </tr>
+   </table>
+   <br>
+    <div id="update_loader"></div>
+    <div id="mensajes_update" style="display:none"></div>  
+     <p class="stdformbutton"> 
+        {button_save}
+    </p>
+</div>

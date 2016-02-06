@@ -1,0 +1,36 @@
+<div id="form_impuesto_detalle" class="stdform stdform2">
+<input id="id_impuesto" type="hidden" name="id_impuesto" data-campo="id_impuesto" value="{id_impuesto}" />
+<p>
+    <label>{lbl_impuesto}: (*)</label>
+    <span class="field"><input id="txt_impuesto" type="text" name="txt_impuesto" data-campo="txt_impuesto" class="input-xlarge requerido" value="{txt_impuesto}" /></span>
+</p>
+<p>
+    <label>{lbl_valor}: (*)</label>
+    <span class="field"><input id="txt_valor" type="text" name="txt_valor" data-campo="txt_valor" class="numerico input-xlarge requerido" value="{txt_valor}" /></span>
+</p>
+<p>
+    <label>{lbl_clave_corta}: (*)</label>
+    <span class="field"><input id="txt_clave_corta" type="text" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-xlarge requerido" value="{txt_clave_corta}" /></span>
+</p>
+<p>
+    <label>{lbl_descripcion}:</label>
+    <span class="field"><textarea id="txt_descripcion" name="txt_descripcion" data-campo="txt_descripcion" class="span5" style="resize: vertical; height: 100px;">{txt_descripcion}</textarea></span>
+</p>
+<p>
+    <label>{lbl_fecha_registro}: </label>
+    <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+</p>           
+<p>
+    <label>{lbl_usuario_registro}: </label>
+    <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+</p>
+<p>
+    <label>{lbl_ultima_modificacion}: </label>
+    <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+</p>
+<div id="update_loader" class="progress progress-striped"></div>
+<div id="mensajes_update" style="display:none"></div>
+<p class="stdformbutton"> 
+    {button_save}
+</p>
+</div>

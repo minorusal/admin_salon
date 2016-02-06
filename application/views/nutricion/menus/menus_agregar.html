@@ -1,0 +1,45 @@
+<div  id="formatos" class="stdform stdform2">
+	<p>
+		<label>{lbl_nombre_menu}: (*)</label>
+		<span class='field'>
+			<input type="text" name="menu" data-campo="menu" />
+		</span>
+	</p>
+	<p>
+		<label>{lbl_clave_corta}: (*)</label>
+		<span class="field">
+			<input type="text"  class="input-medium" name="clave_corta" data-campo="clave_corta" />
+		</span>
+	</p>
+	<p>
+		<label>{lbl_sucursal}: (*)</label>
+		<span class='field'>
+			{dropdown_sucursales}			
+		</span>
+	</p>
+	<p>
+		<label>{lbl_asigna_recetas}: (*)</label>
+		<span class='field'>
+			<label>{lbl_list_recetas_selected}</label>
+			<span class='field formwrapper'>
+				<select id = "recetas_selected" data-campo="recetas_selected" class="clean chosen-multiselect input-xlarge chzn-select"  multiple='multiple'>
+				</select>
+			</span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_asigna_articulos}: (*)</label>
+		<span class='field'>
+			<label>{lbl_list_articulos_selected}</label>
+			<span class = 'field formwrapper'>
+				<select id="articulos_selected" data-campo="articulos_selected" class="clean chosen-multiselect input-xlarge chzn-select" multiple='multiple'>
+				</select>
+			</span>
+		</span>
+	</p>
+	<div id= "loader_formatos" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes_formatos" style="display:none"></div>
+    <p class="stdformbutton">
+        {btn_formato}
+    </p> 
+</div>

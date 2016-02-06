@@ -1,0 +1,57 @@
+<div id="formularios" class="stdform stdform2">
+			<table>
+				<tr>
+					<td>
+						<p>
+							<label>{lbl_sucursal} (*)</label>
+							<span class="field">
+								{list_sucursales} 
+							</span>
+						</p>
+						<p>
+							<label>{lbl_ciclos} (*)</label>
+							<span id="ciclo" class="field">
+								{list_ciclos}
+							</span>
+						</p> 
+						<p>
+							<label>{lbl_servicios} (*)</label>
+							<span  id="servicio" class="field">
+								{list_servicios}
+							</span>
+						</p>
+						<p>
+							<label>{lbl_tiempos} (*)</label>
+							<span class="field">
+								{list_tiempos}
+							</span>
+						</p>
+						<p>
+							<label>{lbl_familias} (*)</label>
+							<span class="field">
+								{list_familias}
+							</span>
+						</p>
+						<p>
+					        <label>{lbl_asignar_recetas}: </label>
+					    	<span id="lts_recetas" class="field">
+					    		{multiselect_recetas}
+					            <span id="loader_editar_porciones_insert"></span>
+					    	</span>
+					    </p>
+					    <div id="registro_loader"></div>
+					    <div id="mensajes" style="display:none"><div class="alert alert-error"> <strong>Atencion!</strong><br>Este ciclo no se puede eliminar, gracias </div></div>
+						<span class="field">
+							{btn_save}
+							{btn_reset}
+						</span>
+					</td>
+					<td>
+						<p>
+							<div id="ciclo_detalle"></div>
+						</p>
+					</td>
+				</tr>
+			</table>
+</div>
+    

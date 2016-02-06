@@ -1,0 +1,94 @@
+<div id="formulario" class="stdform">
+    <table width="100%" heigth="100%" border="1">
+        <tr>
+            <td>
+                 <!-- <label>{orden_num}: (*)</label>
+              <input id="orden_num" type="text" data-campo="orden_num" class="input-large requerido" value{orden_num_val}/>-->
+               <!-- <span id="orden_num" type="text" data-campo="orden_num" class="input-xlarge uneditable-input" value="{orden_num_val}">{orden_num_val}</span>-->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{orden_fecha}: (*)</label>
+                <input id="orden_fecha" type="text" data-campo="orden_fecha" class="input-large requerido fecha"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{orden_tipo}: (*)</label>
+                {list_orden_tipo}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{descripcion}:</label>
+                <textarea id="descripcion" data-campo="descripcion"  class="span5" style="resize: vertical; height: 100px;"></textarea>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="proveedores" style="display:none">
+                    <label>{proveedor}: (*)</label>
+                    {list_proveedores}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="prefactura" style="display:none">
+                    <label>{prefactura_num}: (*)</label>
+                    <input id="prefactura_num" data-campo="prefactura_num" type="text" class="input-large"/>
+                    <hr>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{sucursal}:</label>
+                {list_sucursales}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{entrega_direccion}:</label>
+                <textarea id="entrega_direccion" data-campo="entrega_direccion" class="span5" style="resize: vertical; height: 100px;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{entrega_fecha}: (*)</label>
+                <input id="entrega_fecha" type="text" data-campo="entrega_fecha" class="input-large fecha requerido"/>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{forma_pago}: (*)</label>
+                {list_forma_pago}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{creditos}:</label>
+                {list_creditos}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{observaciones}:</label>
+                <textarea id="observaciones" data-campo="observaciones" class="span5" style="resize: vertical; height: 100px;"></textarea>
+            </td>
+        </tr>       
+        <tr>
+            <td>
+                 <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+                <p class="stdformbutton"> 
+                    {button_save}
+                    {button_reset}
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>

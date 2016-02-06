@@ -1,0 +1,136 @@
+<div id="formulario" class="stdform">
+    <div id="tbl1" class="span5" >
+        <table  class="table table-bordered table-invoice"> 
+            <tr>
+                <td class="width30">
+                <input id="id_compras_orden" type="hidden" data-campo="id_compras_orden" value="{id_compras_orden}" />
+                <input id="estatus" type="hidden" data-campo="estatus" value="{estatus}" />
+                    <label>{orden_num}:</label>
+                </td >
+                <td><strong>{orden_num_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{orden_tipo}:</label>
+                </td>
+                <td><strong>{list_orden_tipo}</strong></td>
+            </tr>
+            <tbody  id="proveedores" {style}>
+                <tr>
+                    <td class="width30">
+                        <!--<div id="proveedores" {style}>-->
+                            <label>{proveedor}:</label>
+                        <!--</div>-->
+                    </td>
+                    <td><strong>{list_proveedores}</strong></td>
+                </tr>
+            </tbody>
+            <tr>
+                <td class="width30">
+                    <label>{sucursal}:</label>
+                </td>
+                <td><strong>{list_sucursales}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{entrega_fecha}:</label>
+                </td>
+                <td><strong>{entrega_fecha_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{credito}</label>
+                </td>
+                <td><strong>{list_creditos}</strong></td>
+            </tr>
+        </table>
+   </div>
+   <div class="span5">
+       <table class="table table-bordered table-invoice">
+            <tr>
+                <td class="width30">
+                    <label>{orden_fecha}:</label>
+                </td>
+                <td><strong>{orden_fecha_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{descripcion}:</label>
+                </td>
+                <td><strong>{descripcion_value}</strong></td>
+            </tr>
+            <tbody id="prefactura"  {style}>
+                <tr>
+                    <td class="width30">
+                        <!--<div id="prefactura"  {style}>-->
+                            <label>{prefactura_num}:</label>
+                        <!--</div>-->
+                    </td>
+                    <td><strong>{prefactura_num_value}</strong></td>
+                </tr>
+            </tbody>
+            <tr>
+                <td class="width30">
+                    <label>{entrega_direccion}:</label>
+                </td>
+                <td><strong>{entrega_direccion_value}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{forma_pago}:</label>
+                </td>
+                <td><strong>{list_forma_pago}</strong></td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{estatus}:</label>
+                </td>
+                <td><strong>{estatus_value}</strong></td>
+            </tr>  
+       </table>
+   </div>
+
+    <table class="table table-bordered table-invoice-full" id="dyntable2" aria-describedby="dyntable2_info" style="margin-left: 0px; width: 100%; {style_table}">
+        <tr>
+            <th class="head0 center">{consecutivo}</th>
+            <th class="head0">{proveedor}</th>
+            <th class="head0">{articulo}</th>
+            <th class="head0">{presentacion}</th>
+            <th class="head0 right">{costo_unitario}</th>
+            <th class="head0 center">{cantidad}</th>
+            <th class="head0 right">{costo_cantidad}</th>
+            <th class="head0 center">{descuento}</th>
+            <th class="head0 right">{subtotal}</th>
+            <th class="head0 right">{imp}</th>
+            <th class="head0 right">{valor_imp}</th>
+            <th class="head0 right">{total}</th>
+        </tr>
+        {table}
+    </table>
+
+    <table class="table invoice-table" >
+        <tbody>
+            <tr>
+                <td class="width65 msg-invoice" style="border: 1px solid #ddd;">
+                    <h4><strong>{observaciones}:</strong></h4>
+                    <p>{observaciones_value} </p>
+                    <p>{fecha_hoy}</p>
+                </td>
+                <td class="width15 right numlist">
+                      <strong>{subtotal}</strong>
+                    <strong>{descuento}</strong>
+                    <strong>{impuesto}</strong>
+                </td>
+                <td class="width20 right numlist">
+                    <strong>{subtotal_value}</strong>
+                    <strong>{descuento_value}</strong>
+                    <strong>{impuesto_value}</strong>
+                </td>
+            </tr>
+        </tbody>
+      </table>   
+
+      <div class="amountdue" >
+        <h1><span>{a_pagar}:</span><span id="value_total" style="font-size:.7em;">{total_value}<span></h1> <br />
+      </div>
+</div>

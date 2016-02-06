@@ -1,0 +1,39 @@
+<div id="form_buscar_ventas" class="stdform stdform2">
+	<p>
+		<label>{lbl_sucursal}: (*)</label>
+		<span class="field">{sucursales_list}</span>
+	</p>
+	<p>
+		<label>{lbl_puntos_venta}</label>
+		<span id="punto_venta" class="field">{puntos_venta_list}</span>
+	</p>
+	<p>
+    	<label>{lbl_fecha_inicio}: (*)</label>
+    	<span class="field"><input id="fecha_inicio" type="text" data-campo="fecha_inicio" class="input-large  fecha" value="{hoy}"/></span>
+	</p>
+	<p>
+    	<label>{lbl_fecha_final}: (*)</label>
+    	<span class="field"><input id="fecha_final" type="text" data-campo="fecha_final" class="input-large  fecha"/></span>
+	</p>
+	<p class="stdformbutton">
+        {button_search}
+        {button_reset}
+    </p>  
+</div>
+
+<div id="tableData" class="dataTables_wrapper" style="display:none;">
+	<div  class="dataTables_length" style="overflow: hidden;">
+		<div  style="display: table-cell;">
+			<div id="btn_export">
+				
+			</div>
+			<div id="loader"></div>
+		</div>
+	</div>
+	<div id="content_list">
+		
+	</div>
+	<div id="table_info" class="dataTables_info"  style="overflow: hidden; ">
+	
+	</div>
+</div>

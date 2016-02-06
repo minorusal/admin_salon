@@ -1,0 +1,56 @@
+<div  id="formatos" class="stdform stdform2">
+	<input type="hidden" id="id_nutricion_menu" name="id_nutricion_menu" data-campo="id_nutricion_menu" value="{id_nutricion_menu}">
+	<p>
+		<label>{lbl_nombre_menu}: (*)</label>
+		<span class='field'>
+			<input type="text" name="txt_menu" data-campo="txt_menu" value="{txt_menu}" />
+		</span>
+	</p>
+	<p>
+		<label>{lbl_clave_corta}: (*)</label>
+		<span class="field">
+			<input type="text"  class="input-medium" name="txt_clave_corta" data-campo="txt_clave_corta" value="{txt_clave_corta}"/>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_sucursal}: (*)</label>
+		<span class='field'>
+			{dropdown_sucursales}			
+		</span>
+	</p>
+	<p>
+		<label>{lbl_asigna_recetas}: (*)</label>
+		<span class='field'>
+			<label>{lbl_list_recetas_selected}</label>
+			<span class='field formwrapper'>
+				{recetas_selected}
+			</span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_asigna_articulos}: (*)</label>
+		<span class='field'>
+			<label>{lbl_list_articulos_selected}</label>
+			<span class = 'field formwrapper'>
+				{articulos_selected}
+			</span>
+		</span>
+	</p>
+	 <p>
+        <label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+	<div id= "loader_formatos" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes_formatos" style="display:none"></div>
+    <p class="stdformbutton">
+        {btn_formato}
+    </p> 
+</div>

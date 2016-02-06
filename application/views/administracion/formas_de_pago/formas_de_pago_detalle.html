@@ -1,0 +1,32 @@
+<div id="form_forma_pago_edit" class="stdform stdform2">
+    <input id="id_forma_pago" type="hidden" name="id_forma_pago" data-campo="id_forma_pago" value="{id_forma_pago}" />
+    <p>
+        <label>{lbl_forma_pago}: (*)</label>
+        <span class="field"><input id="txt_forma_pago" type="text" name="txt_forma_pago" data-campo="txt_forma_pago" class="input-xlarge requerido" value="{txt_forma_pago}" /></span>
+    </p>
+    <p>
+        <label>{lbl_clave_corta}: (*)</label>
+        <span class="field"><input id="txt_clave_corta" type="text" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-xlarge requerido" value="{txt_clave_corta}" /></span>
+    </p>
+    <p>
+        <label>{lbl_descripcion}:</label>
+        <span class="field"><textarea id="txt_descripcion" name="txt_descripcion" data-campo="txt_descripcion" class="span5" style="resize: vertical; height: 100px;">{txt_descripcion}</textarea></span>
+    </p>
+    <p>
+        <label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton"> 
+        {button_save}
+    </p>
+</div>

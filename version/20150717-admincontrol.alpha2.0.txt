@@ -1,0 +1,69 @@
+## ADMIN CONTROL 2.0 ##
+Versión:		admincontrol.alpha2.0
+Publicación:	2015-07-17 10:00
+URL:			http://isolutionapps.com.mx/admincontrol.alpha2.0
+Desarrolladores:
+	- Oscar Maldonado - oscar.maldonado@isolution.mx
+	- Jorge Martínez - jorge.martinez@isolution.mx@isolution.mx
+	- Alejandro Enciso - alvaro.enciso@isolution.mx
+	- Minoru Salazar - daniel.salazar@isolution.mx@isolution.mx
+Contenido:	
+
+- Autenticación de usuarios
+- Inicio
+- Compras
+	- Proveedores
+	- Listado de presentaciones
+	- Ordenes de compra
+		- Creación
+		- Aprobación
+		- Histórico
+	- Catálogos
+		- Artículos
+		- Presentaciones
+		- Líneas
+		- Marcas
+		- Unidad de medida
+		- Embalaje
+- Almacen
+	- Entradas
+		- Recepción ed OC
+		- Ingreso de artículos de OC
+	- Traspasos
+	- Ajustes
+		- Nuevo
+		- Aprobación
+	- Catálogos
+		- Almacenes
+		- Pasillos
+		- Gavetas
+		- Trasnportes
+- Ventas
+	- Catálogos
+		- Clientes
+		- Vendores
+- Nutrición
+	- Valores nutricionales
+	- Recetario
+	- Conformación de ciclos
+	- Programación
+	- Catálogos
+		- Familias
+		- Tiempos
+- Administración
+	- Empresa
+	- Control de usuarios
+		- Usuarios
+		- Perfiles
+		- Puestos
+		- Áreas
+	- Catalogos generales
+		- Impuestos
+		- Descuentos
+		- Formas de pago
+		- Créditos
+		- Entidades
+		- Regiones
+	- Sucursales
+		- Sucursales
+		- Servicios

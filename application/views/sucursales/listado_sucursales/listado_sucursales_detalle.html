@@ -1,0 +1,102 @@
+<div id="form_sucursales_edit" class="stdform stdform2">
+    <input id="id_sucursal" type="hidden" name="id_sucursal" data-campo="id_sucursal" value="{id_sucursal}" />
+    <p>
+        <label>{nombre_sucursal}: (*)</label>
+        <span class="field"><input id="sucursal" type="text" name="sucursal" data-campo="sucursal" class="input-xlarge requerido" value="{sucursal}" /></span>
+    </p>
+    <p>
+        <label>{cvl_corta}: (*)</label>
+        <span class="field"><input id="clave_corta" type="text" name="clave_corta" data-campo="clave_corta" class="input-xlarge requerido" value="{clave_corta}" /></span>
+    </p>
+    <p>
+        <label>
+            {lbl_inicio}: (*)
+            <small>Horario de atención.</small>
+        </label>
+        <span class="field"><input type="text" data-campo="timepicker1" readonly="readonly" id="timepicker1" name="timepicker1 time start" data-campo="timepicker1" value="{timepicker1}" class="gui-input"></span>
+    </p>
+    <p>
+        <label>
+            {lbl_final}: (*)
+            <small>Horario de atención.</small>
+        </label>
+        <span class="field"><input type="text" data-campo="timepicker2" readonly="readonly" id="timepicker2" name="timepicker2 time end" data-campo="timepicker2" value="{timepicker2}" class="gui-input"></span>
+    </p>
+    <p>
+        <label>{lbl_esquema_pago} (*)</label>
+        <span class="field">
+            {list_esquema_pago}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_esquema_venta} (*)</label>
+        <span class="field">
+            {list_esquema_venta}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_forma_pago} (*)</label>
+        <span class="field">
+            {list_forma_pago}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_descuento} (*)</label>
+        <span class="field">
+            {list_descuento}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_comprobante_factura}:</label>
+        <span class="field"><input type="checkbox" id="factura" name="factura" data-campo="factura" {factura}></span>
+    </p>
+    <p>
+        <label>{r_social}: (*)</label>
+        <span class="field"><input id="razon_social" type="text" name="razon_social" data-campo="razon_social" class="input-xlarge requerido" value="{razon_social}" /></span>
+    </p>
+     <p>
+        <label>{lbl_region}: (*)</label>
+        <span class="field">{list_region}</span>
+    </p>
+    <p>
+        <label>{lbl_entidad}: (*)</label>
+        <span class="field">{list_entidad}</span>
+    </p>
+    <p>
+        <label>{r_f_c}: (*)</label>
+        <span class="field"><input id="rfc" type="text" name="rfc" data-campo="rfc" class="input-xlarge requerido" value="{rfc}" /></span>
+    </p>
+    <p>
+        <label>{lbl_email}:</label>
+        <span class="field"><input id="email" type="text" name="email" data-campo="email" class="input-xlarge " value="{email}" /></span>
+    </p>
+    <p>
+        <label>{lbl_encargado}:</label>
+        <span class="field"><input id="encargado" type="text" name="encargado" data-campo="encargado" class="input-xlarge " value="{encargado}" /></span>
+    </p>
+    <p>
+        <label>{lbl_telefono}:</label>
+        <span class="field"><input id="telefono" type="text" name="telefono" data-campo="telefono" class="input-xlarge  numerico" value="{telefono}" /></span>
+    </p>
+    <p>
+        <label>{dir}:</label>
+        <span class="field"><textarea id="direccion" name="direccion" data-campo="direccion" class="span5" style="resize: vertical; height: 100px;">{direccion}</textarea></span>
+    </p>
+    <p>
+        <label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton">
+        {button_save}
+    </p>
+</div>

@@ -1,0 +1,44 @@
+<div id="form_servicios_edit" class="stdform stdform2">
+    <input id="id_servicio" type="hidden" name="id_servicio"  data-campo="id_servicio" value="{id_servicio}" />
+    <p>
+        <label>{lbl_servicio}: (*)</label>
+        <span class="field"><input id="txt_servicio" type="text" name="txt_servicio" data-campo="txt_servicio" class="input-xlarge requerido" value="{txt_servicio}" /></span>
+    </p>
+    <p>
+        <label>{lbl_clave_corta}: (*)</label>
+        <span class="field"><input id="txt_clave_corta" type="text" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-xlarge requerido" value="{txt_clave_corta}" /></span>
+    </p>
+    <p>
+        <label>{lbl_inicio}: (*)</label>
+        <span class="field"><input type="text" id="timepicker1" name="timepicker1 time start" data-campo="timepicker1" value="{timepicker1}" class="gui-input"></span>
+    </p>
+    <p>
+        <label>{lbl_final}: (*)</label>
+        <span class="field"><input type="text" id="timepicker2" name="timepicker2 time end" data-campo="timepicker2" value="{timepicker2}" class="gui-input"></span>
+    </p>
+     <p>
+        <label>{lbl_sucursal}: (*)</label>
+        <span class="field">{list_sucursal}</span>
+    </p>
+    <p>
+        <label>{lbl_descripcion}:</label>
+        <span class="field"><textarea id="txt_descripcion" name="txt_descripcion" data-campo="txt_descripcion" class="span5" style="resize: vertical; height: 100px;">{txt_descripcion}</textarea></span>
+    </p>
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_registro" type="text" data-campo="usuario_registro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro} </span></span>
+    </p>
+    <p>
+        <label>{lbl_fecha_registro}:</label>
+        <span class="field"><span id="fecha_registro" type="text" name="fecha_registro" class="input-xlarge uneditable-input" >{val_fecha_registro}</span></span>
+    </p>           
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modifiacion" class=" span5 textareaUneditable" style="resize: vertical; height: 100px;  " readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton"> 
+        {button_save}
+    </p>
+</div>

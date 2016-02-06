@@ -1,0 +1,126 @@
+{data_css}
+<div id="formulario" class="stdform">
+    <div id="tbl1" class="span5" >
+        <table  class="table table-bordered table-invoice"> 
+            <tr>
+                <td class="width30">
+                    <label>{lbl_articulo}:</label>
+                </td >
+                <td>
+                    <strong>{articulo}</strong>
+                    <input type="hidden"id="id_articulo" value="{id_articulo}">
+                    <input type="hidden"id="id_compras_articulo_precios" value="{id_compras_articulo_precios}">
+                    <input type="hidden"id="id_almacen" value="{id_almacen}">
+                    <input type="hidden"id="id_pasillo" value="{id_pasillo}">
+                    <input type="hidden"id="id_gaveta" value="{id_gaveta}">
+                    <input type="hidden"id="stock_total" value="{stock_total}">
+                    <input type="hidden"id="stock_um_total" value="{stock_um_total}">
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_cl_almacen}:</label>
+                </td>
+                <td>
+                    <strong>{cl_almacen}</strong>
+                </td>
+            </tr>
+            <tbody  id="proveedores" {style}>
+                <tr>
+                    <td class="width30">
+                        <label>{lbl_cl_pasillo}:</label>
+                    </td>
+                    <td>
+                        <strong>{cl_pasillo}</strong>
+                    </td>
+                </tr>
+            </tbody>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_cl_gaveta}:</label>
+                </td>
+                <td>
+                    <strong>{cl_gaveta}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_stock}:</label>
+                </td>
+                <td>
+                    <strong>{stock_total} {cl_stock}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_stock_um}</label>
+                </td>
+                <td>
+                    <strong>{stock_um_total} {cl_um}</strong>
+                </td>
+            </tr>
+        </table>
+   </div>
+   <div class="span5">
+       <table  class="table table-bordered table-invoice"> 
+            <tr>
+                <td class="width30">
+                    <label>{lbl_articulo}:</label>
+                </td >
+                <td>
+                    <strong>{articulo}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_cl_almacen}:</label>
+                </td>
+                <td>
+                    <strong>{cl_almacen}</strong>
+                </td>
+            </tr>
+            <tbody  id="proveedores" {style}>
+                <tr>
+                    <td class="width30">
+                        <label>{lbl_cl_pasillo}:</label>
+                    </td>
+                    <td>
+                        <strong>{cl_pasillo}</strong>
+                    </td>
+                </tr>
+            </tbody>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_cl_gaveta}:</label>
+                </td>
+                <td>
+                    <strong>{cl_gaveta}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_stock_mov}:</label>
+                </td>
+                <td>
+                    <input type="text" class="input-small numerico requerido" id="stock_mov" onkeyup="calculos(1);" value="{stock_mov}"> {cl_stock}
+                </td>
+            </tr>
+            <tr>
+                <td class="width30">
+                    <label>{lbl_stock_um_mov}</label>
+                </td>
+                <td>
+                    <input type="text" class="input-small numerico requerido" id="stock_um_mov" onkeyup="calculos(2);" value="{stock_um_mov}"> {cl_um}
+                </td>
+            </tr>
+        </table>
+   </div>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+     <p class="stdformbutton"> 
+        {button_save}
+        {button_delete}
+    </p>
+    <div id="listaod_afectado" style="display:none"></div>
+</div>

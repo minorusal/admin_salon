@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{sign_tittle}</title>
+    <link rel="shortcut icon" href="{base_url}favicon.ico" />
+    <link rel="stylesheet"    href="{base_url}assets/css/progressbar/static.min.css">
+    <link rel="stylesheet"    href="{base_url}assets/css/style.default.css" type="text/css" />
+    <link rel="stylesheet"    href="{base_url}assets/css/responsive-tables.css">
+    
+    <script type="text/javascript" src="{base_url}assets/js/template/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/modernizr.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/jquery.cookie.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/jquery-impromptu.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/progressbar/jquery.progresstimer.js"></script>
+    <!--Archivos del sistema -->
+    <script type="text/javascript" src="{base_url}assets/js/system/inc.config.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/system/global_system.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/template/custom.js"></script>
+    {data_js}
+</head>
+<body class="loginpage">
+    <div class="regpanel">
+        <div class="regpanelinner">
+            <div class="pageheader animate0 bounceIn">
+                <div class="pageicon"><span class="iconfa-hand-down"></span></div>
+                <div class="pagetitle">
+                    <h5>{sign_type}</h5>
+                    <h1 >{sign_up}</h1>
+                </div>
+            </div>
+            <div class="regcontent animate1 bounceIn">
+                <div class="stdform" id="form_sign_up">
+                    <div class="logo animate0 bounceIn">
+                        <a href="{base_url}"><img src="{base_url}assets/images/logo.png" alt="" /></a>
+                    </div>
+                    <div class ="animate2 bounceIn"
+                        <h3 class="subtitle"  style="text-align:justify;color:#fff" >{sign_info}</h3>
+                    </div>
+                    {form}
+                    <input type="hidden"    id="iduser" value="{idduser}">
+                    <div id="loader" ></div>
+                    <div id="msg" style="display:none;"></div>
+                    <p>{btn_accion}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="regfooter {classanime}">
+        <span>Designed by: <a href="http://www.isolution.mx/" style="color:#fff">IS Intelligent Solution</a></span>
+    </div>
+</body>
+</html>

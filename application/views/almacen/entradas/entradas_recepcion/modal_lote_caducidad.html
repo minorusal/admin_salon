@@ -1,0 +1,26 @@
+	{proveedor} {proveedor_val}<br>
+	{articulo} {articulo_val}<br>
+	{presentacion} {presentacion_val}<br><br>
+	<div class="tabs-right" align="center">
+	    {lbl_lote}
+	  <br>
+	  	<input type="text" id="lotemodal" name="lotemodal" data-campo="lotemodal" value="{lote}">
+	  	<br><br>
+	  {lbl_caducidad}
+	  <br>
+	  <input  data-campo="caducidad" class="locked_active caducidad" type="text" id="caducidad" name="caducidad" value="{caducidad}" readonly>
+	  	<br><br>
+	  {lbl_cantidad}
+	  <br>
+	  <input  data-campo="cantidad_lote_modal" clase="cantidad_lote_modal" type="text" id="cantidad_lote_modal" name="cantidad_lote_modal" value="{cantidad_lote}">
+	  <br><br><br>
+	    <span class="btn btn-primary btn-large" onclick="{btn_aceptar}({id}{id_valor});" style="background-color:#006F00; border-color:#006F00;">
+	    	<span class="ico_blanco fa fa-check">&nbsp;</span>{recibir_lote}
+	    </span>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <span class="btn btn-primary btn-large" onclick="{btn_cerrar}({id});" style="background-color:#9D0000; border-color:#9D0000;">
+	    	<span class="ico_blanco fa fa-times">&nbsp;</span>{devolver_lote}
+	    </span>
+	    <br>
+	    <br>
+	</div>

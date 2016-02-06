@@ -1,0 +1,46 @@
+<div  id="formatos" class="stdform stdform2">
+	<p>
+		<label>{lbl_input_fecha_inicio}: (*)</label>
+		<span class='field input-prepend input-append'>
+			<input id ="fecha_inicio_formatos" data-campo="fecha_inicio_formatos" class="requerido locked_active" type="text" readonly="true"  />
+			<span class="add-on"><i class=" iconfa-calendar"></i></span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_input_fecha_termino}: (*)</label>
+		<span class="field input-prepend input-append">
+			<input id="fecha_termino_formatos" data-campo="fecha_termino_formatos" class="requerido locked_active" type="text" readonly="true" />
+			<span class="add-on"><i class=" iconfa-calendar"></i></span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_sucursal}: (*)</label>
+		<span class="field ">
+			{dropdown_sucursales}
+		</span>
+	</p>
+	<p>
+		<label>{lbl_tipo_formato}: (*)</label>
+		<span class="field formwrapper">
+			<span class="checked">
+				<input type="radio" name="tipo_formato"  value = "1" style="opacity: 0;" checked="checked" >
+			</span>
+			{checked_orden_compra}&nbsp;&nbsp;
+			<span class="">
+				<input type="radio" name="tipo_formato"  value = "2" style="opacity: 0;">
+			</span>
+			{checked_valores_nutricionales}&nbsp;&nbsp;
+			<span class="">
+				<input type="radio" name="tipo_formato"  value = "3" style="opacity: 0;">
+			</span>
+			{checked_licitacion}&nbsp;&nbsp;
+		</span>
+	</p>
+	<div id= "loader_formatos" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes_formatos" style="display:none"></div>
+    <p class="stdformbutton">
+        {btn_formato}
+    </p> 
+</div>
+
+	

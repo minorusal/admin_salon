@@ -1,0 +1,89 @@
+
+<div id="form_proveedores_edit" class="stdform">
+        <input id="id_compras_proveedor" data-campo="id_compras_proveedor" type="hidden" name="id_compras_proveedor" value="{id_compras_proveedor}" />
+        <p>
+            <label>{lbl_rsocial}: (*)</label>
+            <input id="rsocial" type="text" data-campo="rsocial" class="input-xlarge requerido" value="{val_rsocial}" />
+        </p>
+        <p>
+            <label>{lbl_nombre}: (*)</label>
+            <input id="nombre" type="text" data-campo="nombre" class="input-xlarge requerido" value="{val_nombre}" />
+        </p>
+
+        <p>
+            <label>{lbl_clv}: (*)</label>
+            <input id="clave_corta" type="text" data-campo="clave_corta" class="input-large requerido" value="{val_clv}" />
+        </p>
+        <p>
+            <label>{lbl_rfc}: (*)</label>
+            <input id="rfc" type="text" data-campo="rfc" class="input-large requerido" value="{val_rfc}" />
+        </p>
+        <p>
+            <label>{lbl_calle}:</label>
+           <input id="calle" type="text" data-campo="calle" class="input-large " value="{val_calle}" />
+        </p>
+        <p>
+            <label>{lbl_num_int}: </label>
+            <input id="num_int" type="text" data-campo="num_int" class="input-small " value="{val_num_int}" />
+        </p>
+        <p>
+            <label>{lbl_num_ext}:</label>
+            <input id="num_ext" type="text" data-campo="num_ext" class="input-small " value="{val_num_ext}" />
+        </p>
+        <p>
+            <label>{lbl_colonia}: </label>
+            <input id="colonia" type="text" data-campo="colonia" class="input-large " value="{val_colonia}" />
+        </p>
+        <p>
+            <label>{lbl_municipio}:</label>
+            <input id="municipio" type="text" data-campo="municipio" class="input-large " value="{val_municipio}" />
+        </p>
+        <p>
+            <label>{lbl_region} (*)</label>
+            {dropdown_region}
+        </p>
+        <p>
+            <label>{lbl_entidad} (*)</label>
+            {dropdown_entidad}
+        </p>
+        <p>
+            <label>{lbl_cp}: </label>
+            <input id="cp" type="text" data-campo="cp" class="input-small " value="{val_cp}" />
+        </p>
+        <p>
+            <label>{lbl_telefono}: </label>
+            <input id="telefono" type="text" data-campo="telefono" class="input-large numerico" value="{val_telefono}" />
+        </p>
+        <p>
+            <label>{lbl_email} (*): </label>
+            <input id="email" type="text" data-campo="email" class="input-large " value="{val_email}" />
+        </p>
+        <p>
+            <label>{lbl_contacto}: </label>
+            <input id="contacto" type="text" data-campo="contacto" class="input-xlarge " value="{val_contacto}" />
+        </p>
+        <p>
+            <label>{lbl_comentario}: </label>
+             <textarea id="comentario" data-campo="comentario"  class="span5" style="resize: vertical; height: 100px;">{val_comentario}</textarea>
+        </p>
+        
+       <p>
+            <label>{lbl_fecha_registro}: </label>
+            <span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span>
+        </p>           
+        <p>
+            <label>{lbl_usuario_registro}: </label>
+            <span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span>
+        </p>
+        <p>
+            <label>{lbl_ultima_modificacion}: </label>
+            <textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea>
+        </p>
+    
+     <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    
+    <p class="stdformbutton"> 
+       {button_save}
+    </p>
+</div>

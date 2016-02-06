@@ -1,0 +1,102 @@
+<div id="formulario" class="stdform">
+    <table width="100%" heigth="100%" border="1">
+        <tr>
+            <td>
+            <input id="id_compras_orden" type="hidden" data-campo="id_compras_orden" value="{id_compras_orden}" />
+                <label>{orden_num}: (*)</label>
+                <span id="orden_num" type="text" data-campo="orden_num" disabled class="input-xlarge uneditable-input" >{orden_num_value}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{orden_fecha}: (*)</label>
+                <input id="orden_fecha" type="text" data-campo="orden_fecha" class="input-large fecha uneditable-input" disabled="disabled" value="{orden_fecha_value}" />
+            </td>
+        <tr>
+        <tr>
+            <td>
+                <label>{orden_tipo}: (*)</label>
+                {list_orden_tipo}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{descripcion}:</label>
+                <textarea id="descripcion" data-campo="descripcion"  class="span5 uneditable-textarea" disabled style="resize: vertical; height: 100px;">{descripcion_value}</textarea>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="proveedores" {style}>
+                    <label>{proveedor}: (*)</label>
+                    {list_proveedores}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="prefactura"  {style}>
+                    <label>{prefactura_num}: (*)</label>
+                    <input id="prefactura_num" data-campo="prefactura_num" disabled type="text" class="input-large {class}" value="{prefactura_num_value}" />
+                    <hr>
+                </div>
+            </td>
+        </tr>    
+        <tr>
+            <td>
+                <label>{sucursal}:</label>
+                {list_sucursales}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{entrega_direccion}:</label>
+                <textarea id="entrega_direccion" data-campo="entrega_direccion" disabled class="span5 uneditable-input" style="resize: vertical; height: 100px;">{entrega_direccion_value}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{entrega_fecha}: (*)</label>
+                <input id="entrega_fecha" type="text" data-campo="entrega_fecha" disabled class="input-large fecha uneditable-input" value="{entrega_fecha_value}" />
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{forma_pago}: (*)</label>
+                {list_forma_pago}
+            </td>
+        </tr>
+        <tr>        
+            <td>
+                <label>{creditos}:</label>
+                {list_creditos}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{observaciones}:</label>
+                <textarea id="observaciones" data-campo="observaciones" class="span5" disabled style="resize: vertical; height: 100px;">{observaciones_value}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{lbl_fecha_registro}: </label>
+                <span id="timestamp" type="text" data-campo="timestamp" disabled class="input-xlarge uneditable-input" readonly >{timestamp} </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <label>{registro_por}: </label>
+            <span id="usuario_regitro" type="text" data-campo="usuario_regitro" disabled class="input-xlarge uneditable-input" readonly >{usuario_registro}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>{lbl_ultima_modificacion}: </label>
+            <textarea id="ultima_modificacion" class="span5 textareaUneditable" disabled style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea>
+            </td>
+        </tr>
+    </table>
+</div>

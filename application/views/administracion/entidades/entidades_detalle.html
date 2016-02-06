@@ -1,0 +1,32 @@
+<div id="form_entidad_edit" class="stdform stdform2">
+	<input type="hidden" id="id_entidad" name="id_entidad" data-campo="id_entidad" value="{id_entidad}">
+	<p>
+		<label>{lbl_entidad} (*)</label>
+		<span class="field"><input type="text" id="txt_entidad" name="txt_entidad" data-campo="txt_entidad" class="input-xlarge requerido" value="{txt_entidad}" /></span>
+	</p>
+	<p>
+		<label>{lbl_clave_corta} (*)</label>
+		<span class="field"><input type="text" id="txt_clave_corta" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-xlargue requerido" value="{txt_clave_corta}" /></span>
+	</p>
+	<p>
+		<label>{lbl_abreviatura} (*)</label>
+		<span class="field"><input type="text" id="txt_abreviatura" name="txt_abreviatura" data-campo="txt_abreviatura" class="input_xlarge requerido" value="{txt_abreviatura}" /></span>
+	</p>
+	<p>
+		<label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+    	<label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+    	<label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+	<div id="update_loader" class="progress progress-striped"></div>
+	<div id="mensajes_update" style="display:none"></div>
+	<p class="stdformbutton">
+		{button_save}
+	</p>
+</div>

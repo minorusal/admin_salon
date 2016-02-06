@@ -1,0 +1,20 @@
+
+<div  id="form_perfil_save" class="stdform stdform2">
+    <p>
+        <label>{lbl_perfil}: (*)</label>
+        <span class="field"><input id="txt_perfil" type="text" name="txt_perfil" data-campo="txt_perfil" class="input-large requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_clave_corta}: (*)</label>
+        <span class="field"><input id="txt_clave_corta" type="text" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-large requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_descripcion}: </label>
+        <span class="field"><textarea id="txt_descripcion" name="txt_descripcion" data-campo="txt_descripcion" class="span5 " style="resize: vertical; height: 100px;"></textarea></span>
+    </p>
+    <span class="field">{tree_view}</span>
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+        {button_save}
+        {button_reset}
+</div>

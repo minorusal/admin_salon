@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+			
+			body{
+				font-family:Arial;
+				padding-top: 5%;
+				width:100% !important;
+				-webkit-text-size-adjust:none;
+			} 
+			img{
+				border:0; 
+				height:auto; 
+				line-height:100%; 
+				outline:none; 
+				text-decoration:none;
+			}
+			
+			table td{
+
+				border-collapse:collapse;
+			}
+			#templateContainer{
+				width: 600px;
+				border: solid 2px;
+				border-color: #333;
+				padding: 10px;
+				background-color: #333;
+			}
+			h1, .h1{
+				color:#009ad9;
+				display:block;
+				font-family:Arial;
+				font-size:34px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				text-align:left;
+			}
+			h2, .h2{
+				color:#009ad9;
+				display:block;
+				font-family:Arial;
+				font-size:30px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				text-align:left;
+			}
+			h3, .h3{
+				color:#009ad9;
+				display:block;
+				font-family:Arial;
+				font-size:26px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:15px;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				text-align:left;
+			}
+
+			h4, .h4{
+				color:#009ad9;
+				display:block;
+				font-family:Arial;
+				font-size:22px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:2px;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				text-align:left;
+				margin-top:6px;
+			}
+			#outlook a{
+				padding:0;
+			}
+			.ReadMsgBody{
+				width:100%;
+			} 
+			.ExternalClass{
+				width:100%;
+			} 
+			#templateHeader{
+				background-color:#FFFFFF;
+				border-bottom:0;
+			}
+
+			.headerContent{
+				width: 50%;
+				color:#202020;
+				font-family:Arial;
+				font-size:34px;
+				font-weight:bold;
+				line-height:100%;
+				padding:0;
+				text-align:center;
+				vertical-align:middle;
+				background-color:#000000;
+			}
+
+		
+			.headerContent a:link, 
+			.headerContent a:visited, 
+			.headerContent a .yshortcuts {
+				color:#336699;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+
+			#headerImage{
+				height:auto;
+				max-width:600px;
+			}
+
+			
+			.leftColumnContent{
+				background-color:#FFFFFF;
+			}
+
+			
+			.leftColumnContent div{
+				color:#505050;
+				font-family:Arial;
+				font-size:14px;
+				line-height:150%;
+				text-align:left;
+			}
+
+			.leftColumnContent div a:link, 
+			.leftColumnContent div a:visited,  
+			.leftColumnContent div a .yshortcuts {
+				color:#336699;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+
+			.leftColumnContent img{
+				display:inline;
+				height:auto;
+			}
+			.centerColumnContent{
+				background-color:#FFFFFF;
+			}
+
+			
+			.centerColumnContent div{
+				color:#505050;
+				font-family:Arial;
+				font-size:12px;
+				line-height:150%;
+				text-align:left;
+			}
+
+			.centerColumnContent div a:link, 
+			.centerColumnContent div a:visited, 
+			.centerColumnContent div a .yshortcuts{
+				color:#336699;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+
+			.centerColumnContent img{
+				display:inline;
+				height:auto;
+			}
+
+			.rightColumnContent{
+				background-color:#FFFFFF;
+			}
+
+			
+			.rightColumnContent div{
+				color:#505050;
+				font-family:Arial;
+				font-size:12px;
+				line-height:150%;
+				text-align:left;
+			}
+
+			.rightColumnContent div a:link, 
+			.rightColumnContent div a:visited, 
+			.rightColumnContent div a .yshortcuts {
+				color:#336699;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+
+			.rightColumnContent img{
+				display:inline;
+				height:auto;
+			}
+
+			#templateFooter{
+				background-color:#FFFFFF;
+				border-top:0;
+			}
+
+		
+			.footerContent div{
+				color:#009bda;
+				font-family:Arial;
+				font-size:12px;
+				line-height:125%;
+				text-align:left;
+			}
+
+		
+			.footerContent div a:link, 
+			.footerContent div a:visited, 
+			.footerContent div a 
+			.yshortcuts {
+				color:#336699;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+
+			.footerContent img{
+				display:inline;
+			}
+
+			
+			.footer{
+				background-color:#333;			
+			}
+
+			.header{
+				background-color:#333;
+				border:0;
+			}
+			.header div{
+				text-align:center;
+				height: 80px;
+				padding-top: 40px;
+			}
+			.footer div{
+				text-align:center;
+			}
+
+			#utility{
+				background-color:#FFFFFF;
+				border:0;
+			}
+
+			#utility div{
+				text-align:center;
+			}
+
+			#monkeyRewards img{
+				max-width:190px;
+			}
+
+			#img_footer{
+				-webkit-border-radius:8px;
+			    -moz-border-radius:8px;
+			    border-radius:8px;
+
+				background-color: #333;
+			}
+			#tabla_general{
+				background-color: #fff;
+			}
+			.contenido{
+				display: inline-block;
+				color: #666666;
+				margin: 10px;
+				text-align: center;
+				height: 100%;
+				overflow: hidden;
+			}
+			.name{
+				color: #666;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+    <body >
+    	<center>
+	    	<table id="tabla_general" width="600" >
+	    		<tr>
+	    			<td align="center" id="templateContainer">
+	    				<img src="cid:logo"   />
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td align="center">
+	    				<img src="cid:banner" style="width:100%;" />
+	    			</td>
+	    		</tr>
+	    		
+	    		<tr mc:repeatable>
+			       <td valign="top" height="200" style="line-height: 80px;">
+			       		<div mc:edit="tiwc300_content00">
+	                        <h3 class="h3">
+								{titulo} <span class="name">{subtitulo}</span>
+							</h3>
+                           <div class="contenido">
+                           		{contenido}
+						   </div>
+			            </div>
+			        </td>
+			     </tr>
+			    <tr>
+	    			<td align="center" id="templateContainer">
+	    				<img src="cid:footer"  id ="img_footer" />
+	    			</td>
+	    		</tr>
+	    	</table>
+        </center>
+    </body>
+</html>

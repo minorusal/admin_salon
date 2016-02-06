@@ -1,0 +1,141 @@
+<div id="formulario" class="stdform stdform2">  
+    <p>
+        <label>{upc}: </label>
+        <span class="field"><input id="upc" maxlength="13" type="text" name="upc" data-campo="upc" class="input-large requerido numerico"/></span>
+    </p>
+    <p>
+        <label>{articulo} (*)</label>
+        <span class="field">{lts_articulos}</span>
+    </p>
+    <p>
+        <label>{region} (*)</label>
+        <span class="field">{lts_region}</span>
+    </p>
+    <p>
+        <label>{proveedores} (*)</label>
+        <span class="field" id="lts_proveedores_cargar"><select name="lts_proveedores" class="chzn-select requerido" data-campo="lts_proveedores"><option value="0">-----</option></select></span>
+    </p>
+    <p>
+        <label>{marcas} (*)</label>
+        <span class="field">{lts_marcas}</span>
+    </p>
+    <p>
+        <label>{presentaciones} (*)</label>
+        <span class="field">{lts_presentaciones}</span>
+    </p>
+    <p>
+        <label>{embalaje_aplica}:</label>
+        <span class="field"><input type="checkbox" id="embalaje_aplica" name="embalaje_aplica" data-campo="embalaje_aplica" onclick="oculta_embalaje();" checked></span>
+    </p>
+    <p>
+        <div id="embajale">
+            <label>{embajale} (*)</label>
+            <span class="field">{lts_embalaje}</span>
+        </div>
+    </p>
+    <p>
+        <label>{presentacion_x_embalaje}: (*)</label>
+        <span class="field">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="presentacion_x_embalaje" data-campo="presentacion_x_embalaje" type="text" name="presentacion_x_embalaje" class="input-small requerido numerico" onkeyup="load_emb_data();" />
+        <span id="pre_em" style="display:none">{pre_em}</span></span>
+    </p>
+    <p>
+        <label>{um_x_embalaje}: (*)</label>
+        <span class="field">
+        <input id="radio_x_embalaje" type="radio" name="um" value="1" onclick="validar_um(this.value);" data-campo="um" checked="checked">
+        <input id="um_x_embalaje" type="text" name="um_x_embalaje" data-campo="um_x_embalaje" class="input-small requerido numerico" onkeyup="calcula_um_presentacion();"/>
+        <span id="pre_um2" style="display:none">{pre_um}</span><span id="signo2" style="display:none"> * </span><span id="embalaje_cl" style="display:none">{embalaje_cl}</span></span>
+    </p>
+    <p>
+        <label>{um_x_presentacion}: (*)</label>
+        <span class="field">
+        <input id="radio_x_presentacion" type="radio" name="um" data-campo="um" value="2" onclick="validar_um(this.value);">
+        <input id="um_x_presentacion" data-campo="um_x_presentacion" type="text" name="um_x_presentacion" class="input-small requerido numerico" onkeyup="calcula_um_embalaje();" readonly />
+        <span id="pre_um" style="display:none">{pre_um}</span><span id="signo" style="display:none"> * </span><span id="pre_em2" style="display:none">{pre_em}</span></span>
+    </p>
+    <p>
+        <label>{costo_sin_impuesto}: (*)</label>
+        <span class="field">
+        &nbsp;&nbsp;<span>{moneda}</span>
+        <input id="costo_sin_impuesto" type="text" name="costo_sin_impuesto" data-campo="costo_sin_impuesto" class="input-small requerido numerico" onkeyup="calcula_costos();" />
+        </span>
+    </p>
+    <p>
+        <label>{peso_unitario}: (*)</label>   
+        <span class="field">     
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="peso_unitario" type="text" name="peso_unitario" data-campo="peso_unitario" class="input-small requerido" readonly/>
+        <span id="lbl_peso" style="display:none"></span></span>
+    </p>
+    <p>
+        <label>{costo_unitario}: (*)</label> 
+        <span class="field">       
+        &nbsp;&nbsp;<span>{moneda}</span>
+        <input id="costo_unitario" type="text" name="costo_unitario" data-campo="costo_unitario" class="input-small requerido" readonly/>
+        <span id="lbl_unitario" style="display:none"></span></span>
+    </p>
+    <p>
+        <label>{costo_x_um}: (*)</label>
+        <span class="field">
+        &nbsp;&nbsp;<span>{moneda}</span>
+        <input id="costo_x_um" type="text" name="costo_x_um" data-campo="costo_x_um" class="input-small requerido" readonly/>
+        <span id="lbl_costo_x_um" style="display:none"></span></span>
+    </p>
+    <p>
+        <label>{impuesto_aplica}:</label>
+        <span class="field">
+        <input type="checkbox" id="impuesto_aplica" name="impuesto_aplica" data-campo="impuesto_aplica" onclick="oculta_impuesto()" checked></span>
+    </p>
+    <p>
+        <div id="impuesto">
+            <label>{impuesto_porcentaje}: (*)</label>
+            <span class="field">{lts_impuesto}</span>
+        </div>
+    </p>
+    <p>
+        <div id="div_desglose">
+            <label>{desglose_impuesto}:</label>
+            <span class="field">
+            &nbsp;&nbsp;<span>{moneda}</span>
+            <input id="desglose_impuesto" type="text" name="desglose_impuesto" data-campo="desglose_impuesto" class="input-small" readonly/></span>
+        </div>
+    </p>
+    <p>
+        <div id="div_costo_final">
+            <label>{costo_final}:</label>
+            <span class="field">
+            &nbsp;&nbsp;<span>{moneda}</span>
+            <input id="costo_final" type="text" name="costo_final" data-campo="costo_final" class="input-small" readonly/></span>
+        </div>
+    </p>
+     <p>
+        <label>{articulo_default}:</label>
+        <span class="field">
+        <input type="checkbox" id="listado_principal" name="listado_principal" data-campo="listado_principal"></span>
+    </p>
+    <p>
+        <div id="div_rendimiento">
+            <label>{rendimiento}: (*)</label>
+            <span class="field">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="rendimiento" type="text" name="rendimiento" data-campo="rendimiento" class="input-small requerido numerico"/>
+            &nbsp;<span>%</span></span>
+        </div>
+    </p>
+    <p>
+        <label>{precio_publico}: (*)</label>
+        <span class="field">
+        &nbsp;&nbsp;<span>{moneda}</span>
+        <input id="precio_publico" type="text" name="precio_publico" data-campo="precio_publico" class="input-small requerido numerico" onkeyup="calcula_precio_publico();"/>
+    </p>
+    <p>
+        <label>{precio_publico_con_impuesto}: (*)</label>
+        <span class="field">
+        &nbsp;&nbsp;<span>{moneda}</span>
+        <input id="precio_publico_con_impuesto" type="text" name="precio_publico_con_impuesto" data-campo="precio_publico_con_impuesto" class="input-small requerido numerico"/>
+    </p>
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+     <p class="stdformbutton"> 
+        {button_save}
+        {button_reset}
+    </p>
+</div>

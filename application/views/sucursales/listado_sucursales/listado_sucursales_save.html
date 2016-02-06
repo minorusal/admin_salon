@@ -1,0 +1,90 @@
+<div id="form_sucursales_save" class="stdform stdform2">   
+    <p>
+        <label>{nombre_sucursal}: (*)</label>
+        <span class="field"><input id="sucursal" type="text" name="sucursal" data-campo="sucursal" class="input-xlarge requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{cvl_corta}: (*)</label>
+        <span class="field"><input id="clave_corta" type="text" name="clave_corta" data-campo="clave_corta" class="input-xlarge requerido" value="" /></span>
+    </p>
+    <p>
+        <label>
+            {lbl_inicio}: (*)
+            <small>Horario de atención.</small>
+        </label>
+        <span class="field"><input type="text" readonly="readonly" id="timepicker1" name="timepicker1 time start" data-campo="timepicker1" data-campo="timepicker1" value="" class="gui-input"></span>
+    </p>
+    <p>
+        <label>
+            {lbl_final}: (*)
+            <small>Horario de atención.</small>
+        </label>
+        <span class="field"><input type="text" readonly="readonly" id="timepicker2" name="timepicker2 time end" data-campo="timepicker2" data-campo="timepicker2" value="" class="gui-input"></span>
+    </p>
+    <p>
+        <label>{lbl_esquema_pago} (*)</label>
+        <span class="field">
+            {list_esquema_pago}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_esquema_venta} (*)</label>
+        <span class="field">
+            {list_esquema_venta}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_forma_pago} (*)</label>
+        <span class="field">
+            {list_forma_pago}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_descuento} (*)</label>
+        <span class="field">
+            {list_descuento}
+        </span>
+    </p>
+    <p>
+        <label>{lbl_comprobante_factura}:</label>
+        <span class="field"><input type="checkbox" id="factura" name="factura" data-campo="factura" ></span>
+    </p>
+    <p>
+        <label>{r_social}: (*)</label>
+        <span class="field"><input id="razon_social" type="text" name="razon_social" data-campo="razon_social" class="input-xlarge requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{r_f_c}: (*)</label>
+        <span class="field"><input id="rfc" type="text" name="rfc" data-campo="rfc" class="input-xlarge requerido" value="" /></span>
+    </p>
+     <p>
+        <label>{lbl_region}: (*)</label>
+        <span class="field">{list_region}</span>
+    </p> 
+    <p>
+        <label>{lbl_entidad}: (*)</label>
+        <span class="field">{list_entidad}</span>
+    </p>
+    <p>
+        <label>{lbl_email}:</label>
+        <span class="field"><input id="email" type="text" name="email" data-campo="email" class="input-xlarge " value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_encargado}:</label>
+        <span class="field"><input id="encargado" type="text" name="ecnargado" data-campo="ecnargado" class="input-xlarge " value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_telefono}:</label>
+        <span class="field"><input id="telefono" type="text" name="telefono" data-campo="telefono" class="input-xlarge  numerico" value="" /></span>
+    </p>
+    <p>
+        <label>{direccion}: </label>
+        <span class="field"><textarea id="direccion" name="direccion" data-campo="direccion" class="span5 " style="resize: vertical; height: 100px;"></textarea></span>
+    </p>
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+    <p class="stdformbutton">
+        {button_save}
+        {button_reset}
+    </p>
+</div>

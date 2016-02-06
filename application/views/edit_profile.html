@@ -1,0 +1,164 @@
+<div class="pageheader">
+    <div class="pageicon"><span class="{icon}"></span></div>
+    <div class="pagetitle">
+        <h5>{titulo_modulo}</h5>
+        <h1>{titulo_seccion}</h1>
+    </div>
+    <div id = "loader_content"></div>
+</div>
+
+<div class="maincontent">
+    <div class="maincontentinner ">
+        <div id='cropper-image'>
+            <div id="set_infor_perfil" class="progress progress-striped" style="display:none;"></div>
+            <div id="msg_perfil" style="display:none"></div>
+            <div id = "profile" class="row-fluid">
+                <div class="span6">
+                    <div class="invoice_logo">
+                        <img  style="cursor:pointer;max-width:180px;max-height:210px;" src="{avatar_user}" title="Cambiar Avatar" class=" img-polaroid image-edit">
+                    </div>
+                    <table class="table table-bordered table-invoice">
+                        <tbody>
+                            <tr>
+                                <td class="width30">{lbl_nombre}: (*)</td>
+                                <td class="width70">
+                                    <input value="{val_nombre}" type="text"  style="font-family: 'RobotoBold', 'Helvetica Neue', Helvetica, sans-serif;background-color: #fff;border: none;" data-campo="nombre" class="form-control input-large requerido"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="width30">{lbl_paterno}: (*)</td>
+                                <td class="width70">
+                                    <input value="{val_paterno}" type="text"  style="font-family: 'RobotoBold', 'Helvetica Neue', Helvetica, sans-serif;background-color: #fff;border: none;" data-campo="paterno" class="input-large requerido"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="width30">{lbl_materno}: (*)</td>
+                                <td class="width70">
+                                    <input value="{val_materno}" type="text"  style="font-family: 'RobotoBold', 'Helvetica Neue', Helvetica, sans-serif;background-color: #fff;border: none;" data-campo="materno" class="input-large requerido"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="width30">{lbl_email}: (*)</td>
+                                <td class="width70">
+                                    <input value="{val_mail}" type="text"  style="font-family: 'RobotoBold', 'Helvetica Neue', Helvetica, sans-serif;background-color: #fff;border: none;" data-campo="mail" class="input-large requerido"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="width30">{lbl_telefono}: (*)</td>
+                                <td class="width70">
+                                    <input value="{val_telefono}" type="text"  style="font-family: 'RobotoBold', 'Helvetica Neue', Helvetica, sans-serif;background-color: #fff;border: none;" data-campo="telefono" class="numerico input-large requerido"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="span6">
+                    
+                    
+                    <table class="table table-bordered table-invoice">
+                        <tbody>
+                            <tr>
+                                <td class="width30">{empresa}:</td>
+                                <td class="width70">
+                                    <strong>{val_empresa}</strong><br>
+                                    {val_info}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-invoice">
+                        <tbody>
+                            <tr>
+                                <td class="width30">{sucursal}:</td>
+                                <td class="width70">
+                                    <strong>{val_sucursal}</strong> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="width30">{area}:</td>
+                                <td class="width70">
+                                    <strong>{val_area}</strong> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="width30">{puesto}:</td>
+                                <td class="width70">
+                                    <strong>{val_puesto}</strong> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="width30">{user_name}:</td>
+                                <td class="width70">
+                                    <input id="username" value="{val_user_name}" type="text"  style="font-family: 'RobotoBold', 'Helvetica Neue', Helvetica, sans-serif;background-color: #fff;border: none;" data-campo="username" class="input-large requerido"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{pwd}:</td>
+                                <td>
+                                    <input id="pwd" value="{val_user_pwd}" type="password"  style="font-family: 'RobotoBold', 'Helvetica Neue', Helvetica, sans-serif;background-color: #fff;border: none;" data-campo="pwd" class="input-large requerido"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{fecha_registro}:</td>
+                                <td><strong>{val_fecha_registro}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <center>
+                    <button id="set_profile" name="actualizar" type="button" class="btn btn-primary" >
+                        {set_profile}
+                    </button>
+                    </center>
+                </div>
+            </div> 
+            <br>
+            <!-- Cropping modal -->
+            <div id="edit-image-modal" class="modal fade modal-wide"  >
+                <div class="modal-dialog " >
+                    <div class="modal-content">
+                        <form class="avatar-form" action="{base_url}cropper/avatar_user" enctype="multipart/form-data" method="post">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h1 class="modal-title" id="avatar-modal-label" >{change_avatar}</h1>
+                            </div>
+                            <div class="modal-body">
+                                <div class="avatar-body">
+
+                                    <!-- Upload image and data -->
+                                    <div class="avatar-upload">
+                                        <input type="hidden" class="avatar-src" name="avatar_src">
+                                        <input type="hidden" class="avatar-data" name="avatar_data">
+                                        <label for="avatarInput">{local_img_upload}</label>
+                                        <input id="image-edit-inputfile" type="file" class="avatar-input" id="avatarInput" name="avatar_file">
+                                    </div>
+
+                                    <!-- Crop and preview -->
+                                    <div class="row">
+                                        <div class="col-md-10" >
+                                            <div class="avatar-wrapper"></div>
+                                        </div>
+                                       
+                                    </div>
+
+                                    <div class="row avatar-btns">
+                                        <div class="col-md-3">
+                                            <center>
+                                                <button type="submit" style ="width:70%" class="btn btn-primary btn-block avatar-save">{save_avatar}</button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer" >
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--  modal -->
+        
+            <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+            <input id="input_cropper" type="hidden" name="input_cropper"  />
+        </div>   
+   

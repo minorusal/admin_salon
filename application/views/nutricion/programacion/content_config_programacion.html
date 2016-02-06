@@ -1,0 +1,111 @@
+
+	<p>
+		<label>{lbl_input_fecha_inicio}</label>
+		<span class="field input-prepend input-append">
+			<input id ="fecha_inicio" type="text" class="locked_active" readonly="true" value="{value_fecha_inicio}" />
+			<span class="add-on"><i class=" iconfa-calendar"></i></span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_input_fecha_termino}</label>
+		<span class="field input-prepend input-append">
+			<input id="fecha_termino" type="text" class="locked_active" readonly="true" value="{value_fecha_termino}" />
+			<span class="add-on"><i class=" iconfa-calendar"></i></span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_dias_descartados}</label>
+		<span class="field">
+			<a class="">{lbl_info_dias_descartados}</a><br>
+			{values_dias_descartados}
+		</span>
+	</p>
+
+	<p>
+		<label>{lbl_dias_festivos}</label>
+		<span class="field">
+			<label>{info_select_dia}</label>
+			<span class="field input-prepend input-append">
+				<input id ="fechas_festivas" class ="locked_active input_calendar" type="text" readonly="true"/>
+				<span class="add-on"><i class=" iconfa-calendar"></i></span>
+			</span>
+			<label></label>
+			<span class="field">
+				<button onclick="agregar_festivo()" class="btn ds_prev">
+			    	<i class=" iconfa-chevron-down">
+			    	</i>
+			    	{info_agregar_festivo}
+			    </button>
+			</span>
+			<label>{info_select_dia}</label>
+			<span class="field">
+			    {multidropdown_festivos}
+		    </span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_dias_especiales}</label>
+		<span class="field">
+			<label>{info_select_dia}</label>
+			<span class="field input-prepend input-append">
+				<input id ="fechas_especiales" class ="locked_active input_calendar" type="text" readonly="true"/>
+				<span class="add-on"><i class=" iconfa-calendar"></i></span>
+			</span>
+			<label>{lbl_ciclos_disponibles}</label>
+			<span class="field">
+				{dropdown_ciclos_especiales}
+			</span>
+			<label></label>
+			<span class="field">
+				<button onclick="agregar_ciclo_especial()" class="btn ds_prev">
+			    	<i class=" iconfa-chevron-down">
+			    	</i>
+			    	{info_agregar_ciclo}
+			    </button>
+			</span>
+			<label>{info_ciclos_especiales}</label>
+			<span class="field">
+			    {multidropdown_especiales}
+		    </span>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_agregar_ciclos}</label>
+		<span class="field">
+			<a >{lbl_info_agregar_ciclos}</a><br><br>
+			{multiselect_ciclos}
+		</span>
+	</p>
+	<p>
+		<label>{lbl_orden_ciclos}</label>
+		<span class="field">
+			<a >{lbl_info_orden_ciclos}</a><br>
+			<center>
+				<div style="text-align:left;border:2px solid #ddd;width:30%;padding:20px;cursor:pointer;">
+			 		{ciclos_programados}
+				</div>
+				<br>
+			</center>
+		</span>
+	</p>
+	<p>
+		<label>{lbl_cantidad_recetas}</label>
+
+		<span class="field">
+			<a >{lbl_info_cantidad_recetas}</a><br><br>
+			{dropdown_ciclos}
+		</span>
+	</p>
+	<p id="edicion_cantidades_receta" style="display:none;">
+		<label>{lbl_cantidad_recetas}</label>
+		
+		<span class="field" id="cantidades_ciclo_receta">
+			
+		</span>
+		<div id="loader_cantidades" class="progress progress-striped" style="display:none;"></div>
+	</p>
+	<div id= "registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+    <p class="stdformbutton">
+        {btn_guardar_parametros}
+    </p>  

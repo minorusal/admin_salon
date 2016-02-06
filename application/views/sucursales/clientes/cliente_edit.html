@@ -1,0 +1,93 @@
+<div id="form_clientes_edit" class="stdform stdform2">
+   
+    <input id="id_cliente" type="hidden" name="id_cliente" data-campo="id_cliente" value="{id_cliente}" />
+        <p>
+            <label>{nombre_cliente}: (*)</label>
+            <span class="field"><input id="nombre" type="text" name="nombre" data-campo="nombre" class="input-large requerido" value="{cliente_value}" /></span>
+        </p>
+        <p>
+            <label>{apellido_paterno}: (*)</label>
+            <span class="field"><input id="paterno" type="text" name="paterno" data-campo="paterno" class="input-large requerido" value="{paterno_value}" /></span>
+        </p>
+        <p>
+            <label>{apellido_materno}: (*)</label>
+            <span class="field"><input id="materno" type="text" name="materno" data-campo="materno" class="input-large requerido" value="{materno_value}" /></span>
+        </p>
+        <p>
+            <label>{razon_social}: (*)</label>
+            <span class="field"><input id="razon_social" type="text" name="razon_social" data-campo="razon_social" class="input-large requerido" value="{rs_value}" /></span>
+        </p>
+        <p>
+            <label>{clave_corta}: (*)</label>
+            <span class="field"><input id="clave_corta" type="text" name="clave_corta" data-campo="clave_corta" class="input-large requerido" value="{clave_value}" /></span>
+        </p>
+        <p>
+            <label>{rfc}: (*)</label>
+            <span class="field"><input id="rfc" type="text" name="rfc" data-campo="rfc" class="input-large requerido" value="{rfc_value}" /></span>
+        </p>
+        <p>
+            <label>{calle}:</label>
+            <span class="field"><input id="calle" type="text" name="calle" data-campo="calle" class="input-large" value="{calle_value}" /></span>
+        </p>
+        <p>
+            <label>{num_int}:</label>
+            <span class="field"><input id="num_int" type="text" name="num_int" data-campo="num_int" class="input-large" value="{num_int_value}" /></span>
+        </p>
+        <p>
+            <label>{num_ext}:</label>
+            <span class="field"><input id="num_ext" type="text" name="num_ext" data-campo="num_ext" class="input-large" value="{num_ext_value}" /></span>
+        </p>
+        <p>
+            <label>{colonia}:</label>
+            <span class="field"><input id="colonia" type="text" name="colonia" data-campo="colonia" class="input-large" value="{colonia_value}" /></span>
+        </p>
+        <p>
+            <label>{municipio}:</label>
+            <span class="field"><input id="municipio" type="text" name="municipio" data-campo="municipio" class="input-large " value="{municipio_value}" /></span>
+        </p>
+        <p>
+            <label>{entidad} (*)</label>
+            <span class="field">{dropdown_entidad}</span>
+        </p>
+        <p>
+            <label>{sucursal} (*)</label>
+            <span class="field">{dropdown_sucursal}</span>
+        </p>
+        <p>
+            <label>{lbl_punto_venta} (*)</label>
+            <span class="field" id="list_punto_venta">
+                {list_punto_venta}
+            </span>
+        </p>
+        <p>
+            <label>{cp}:</label>
+            <span class="field"><input id="cp" type="text" name="cp" data-campo="cp" class="input-large " value="{cp_value}" /></span>
+        </p>
+        <p>
+            <label>{telefonos}:</label>
+            <span class="field"><input id="telefonos" type="text" name="telefonos" data-campo="telefonos" class="input-large numerico" value="{telefonos_value}" /></span>
+        </p>
+        <p>
+            <label>{email}:</label>
+            <span class="field"><input id="email" type="text" name="email" data-campo="email" class="input-large" value="{val_email}" /></span>
+        </p>
+        <p>
+            <label>{timestamp}:</label>
+            <span class="field"><span id="timestamp" type="text" name="timestamp" data-campo="timestamp" class="input-xlarge uneditable-input" >{timestamp_value}</span></span>
+        </p>
+         <p>
+            <label>{registro_por}: </label>
+            <span class="field"><span id="user" type="text" name="timestamp" data-campo="timestamp" class="input-xlarge uneditable-input" >{val_usuarios_registro}</span></span>
+        </p>
+        <p>
+            <label>{lbl_ultima_modificacion}: </label>
+            <span class="field"><textarea id="contacto" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+        </p>
+
+
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton"> 
+    {button_save}
+    </p>
+</div>

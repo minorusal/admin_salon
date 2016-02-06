@@ -1,0 +1,52 @@
+<div id="formulario" class="stdform stdform2">
+    <input id="id_transporte" type="hidden" name="id_transporte" value="{id_transporte}" />
+    <p>
+        <label>{lbl_placas}: (*) </label>
+        <span class="field"><input id="txt_placas" type="text" name="txt_placas" class="input-xlarge" value="{txt_placas}" /></span>
+    </p>
+    <p>
+        <label>{lbl_nombre_conductor}: (*)</label>
+        <span class="field"><input id="txt_nombre_conductor" type="text" name="txt_nombre_conductor" class="input-xlarge requerido" value="{txt_nombre_conductor}" /></span>
+    </p>
+    <p>
+        <label>{lbl_num_licencia}: (*)</label>
+        <span class="field"><input id="txt_num_licencia" type="text" name="txt_num_licencia" class="input-xlarge requerido" value="{txt_num_licencia}" /></span>
+    </p>
+    <p>
+        <label>{cvl_corta}: (*)</label>
+        <span class="field"><input id="clave_corta" type="text" name="clave_corta" class="input-xlarge requerido" value="{clave_corta}" /></span>
+    </p>
+    <p>
+        <label>{lbl_empresa}: </label>
+        <span class="field"><input id="txt_empresa" type="text" name="txt_empresa" class="input-xlarge" value="{txt_empresa}" /></span>
+    </p>
+    <p>
+        <label>{lbl_marca}: </label>
+        <span class="field"><input id="txt_marca" type="text" name="txt_marca" class="input-xlarge" value="{txt_marca}" /></span>
+    </p>
+    <p>
+        <label>{lbl_modelo}: </label>
+        <span class="field"><input id="txt_modelo" type="text" name="txt_modelo" class="input-xlarge" value="{txt_modelo}" /></span>
+    </p>
+    <p>
+        <label>{descrip}:</label>
+        <span class="field"><textarea id="descripcion" name="descripcion"  class="span5" style="resize: vertical; height: 100px;">{descripcion}</textarea></span>
+    </p>
+    <p>
+        <label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+   <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton">
+        {button_save}
+    </p>
+</div>

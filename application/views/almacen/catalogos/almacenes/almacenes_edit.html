@@ -1,0 +1,37 @@
+<div id="formulario">
+    <div >
+        <div style="float:left">
+            <input id="id_almacen" type="hidden" name="id_almacen" value="{id_almacen}" />
+            <p>
+                <label>{nombre_almacen}: (*)</label>
+                <input id="almacen" type="text" name="almacen" class="input-xlarge requerido" value="{almacen}" />
+            </p>
+            <p>
+                <label>{cvl_corta}: (*)</label>
+                <input id="clave_corta" type="text" name="clave_corta" class="input-xlarge requerido" value="{clave_corta}" />
+            </p>
+            <!-- <p>
+                <label>{sucursal}: (*)</label>
+                {list_sucursal}
+            </p> -->
+            <p>
+                <label>{fecha_registro}:</label>
+                <span id="timestamp" type="text" name="timestamp" class="input-xlarge uneditable-input" >{timestamp}</span>
+            </p>
+            <p>
+                <label>{registro_por}:</label>
+                <span readonly id="usuario_registro" type="text" name="usuario_registro" class="input-xlarge  uneditable-input " >{usuario_registro}</span>
+            </p>
+        </div>
+        
+    </div>
+    <div style="clear:both">
+        <p>
+            <label>{descrip}:</label>
+            <textarea id="descripcion" name="descripcion"  class="span5" style="resize: vertical; height: 100px;">{descripcion}</textarea>
+        </p>
+        <div id="update_loader"></div>
+        <div id="mensajes_update" style="display:none"></div>
+         {button_save}
+    </div>
+</div>

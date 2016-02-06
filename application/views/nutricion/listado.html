@@ -1,0 +1,23 @@
+<div id="dyntable_wrapper" class="dataTables_wrapper" role="grid">
+	<div  class="dataTables_length" style="overflow: hidden;">
+		<div  style="display: table-cell;">
+			<div>
+				<span class="searchbar" style="position:inherit;">
+					<input type="text" name="keyword" placeholder="Search" class="biginput" id="search-query" autocomplete="off">
+				</span>
+				{export}
+			</div>
+			<div id="loader"></div>
+		</div>
+		{filtro}
+	</div>
+	<div id="mensajes_grid" style="display:none"></div>
+	<div id="loader_global"></div>
+    <div id="content_list">
+  		{tabla}
+  	</div>
+    <div id="table_info" class="dataTables_info"  style="overflow: hidden;">
+    	{item_info}
+    	{paginador}
+    </div>
+</div>

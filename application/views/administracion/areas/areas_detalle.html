@@ -1,0 +1,33 @@
+<div id="form_area_edit" class="stdform stdform2">
+    <input id="id_area" type="hidden" name="id_area" data-campo="id_area" value="{id_area}" />
+    <p>
+        <label>{lbl_area}: (*)</label>
+        <span class="field"><input id="txt_area" type="text" name="txt_area" data-campo="txt_area" class="input-xlarge requerido" value="{txt_area}" /></span>
+    </p>
+    <p>
+        <label>{lbl_clave_corta}: (*)</label>
+        <span class="field"><input id="txt_clave_corta" type="text" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-xlarge requerido" value="{txt_clave_corta}" /></span>
+    </p>
+    <p>
+        <label>{lbl_descripcion}:</label>
+        <span class="field"><textarea id="txt_descripcion" name="txt_descripcion" data-campo="txt_descripcion" class="span5" style="resize: vertical; height: 100px;">{txt_descripcion}</textarea></span>
+    </p>
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_registro" type="text" data-campo="usuario_registro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro} </span></span>
+    </p>
+    <p>
+        <label>{lbl_fecha_registro}:</label>
+        <span class="field"><span id="fecha_registro" type="text" name="fecha_registro" class="input-xlarge uneditable-input" >{val_fecha_registro}</span></span>
+    </p>           
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modifiacion" class=" span5 textareaUneditable" style="resize: vertical; height: 100px;  " readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton"> 
+        {button_save}
+    </p>
+</div>
+<!-- class="progress progress-striped" style="display:none;" -->

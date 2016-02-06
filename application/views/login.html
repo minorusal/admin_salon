@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="es-ES">
+    <head>
+        <title>{site_title}</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="{base_url}favicon.ico" />
+        <link rel="stylesheet"    href="{base_url}assets/css/progressbar/static.min.css">
+        <link rel="stylesheet"    href="{base_url}assets/css/style.default.css" type="text/css" />
+        <link rel="stylesheet"    href="{base_url}assets/css/jquery-impromptu.css" type="text/css" />
+        
+        <script type="text/javascript" src="{base_url}assets/js/template/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/jquery-migrate-1.1.1.min.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/jquery-ui-1.9.2.min.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/modernizr.min.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/jquery.cookie.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/jquery-impromptu.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/progressbar/jquery.progresstimer.js"></script>
+        <!--Archivos del sistema -->
+        <script type="text/javascript" src="{base_url}assets/js/system/inc.config.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/system/global_system.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/system/login.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/template/custom.js"></script>
+        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="{base_url}assets/js/excanvas.min.js"></script><![endif]-->
+    </head>
+<body class="loginpage">
+    <div class="loginpanel">
+        <div class="loginpanelinner">
+            <div class="logo animate0 bounceIn">
+                <img src="{base_url}assets/images/logo.png" alt="" />
+            </div>
+            {form_open}
+                <div class="inputwrapper login-alert">
+                <div class="alert alert-error">Invalid username or password</div>
+                </div>
+                <div class="inputwrapper animate1 bounceIn">
+                    {form_input_hidden}
+                    {form_input_user}
+                </div>
+                <div class="inputwrapper animate2 bounceIn">
+                    {form_input_pwd}
+                </div>
+                <div class="inputwrapper animate3 bounceIn">
+                    {form_button}
+                </div>
+                <div class="inputwrapper animate3 bounceIn">
+                    <center>
+                        <label>
+                            <a id="forgot_pwd" style="color:#fff">{forgot_pwd}</a>
+                        </label>
+                    </center>
+                </div>
+                
+            {form_close}
+            <div id= "progress" class=" progress-login " ></div>
+        </div>      
+    </div>
+</body>
+</html>    

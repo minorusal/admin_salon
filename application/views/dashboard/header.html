@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8;" />
+		<title>{site_title}</title>
+		<link rel="shortcut icon" href="{base_url}favicon.ico" />
+		 
+		<link rel="stylesheet"    href="{base_url}assets/css/progressbar/static.min.css">
+		<link rel="stylesheet"    href="{base_url}assets/css/cropper/cropper.min.css"> 
+
+		<link rel="stylesheet"    href="{base_url}assets/css/jquery.treeview.css">
+		<link rel="stylesheet"    href="{base_url}assets/css/smart-forms.css">
+		<link rel="stylesheet"    href="{base_url}assets/css/style.default.css" type="text/css" />
+		<link rel="stylesheet"    href="{base_url}assets/css/cropper/main.css">
+		<link rel="stylesheet"    href="{base_url}assets/css/responsive-tables.css">
+        <link rel="stylesheet"    href="{base_url}assets/css/jquery-impromptu.css" type="text/css" />
+        <link rel="stylesheet"    href="{base_url}assets/css/estilos-custom.css">
+        <link rel="stylesheet"    href="{base_url}assets/css/gotop.css">
+            
+		{data_css}
+
+		<script type="text/javascript" src="{base_url}assets/js/template/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/jquery-migrate-1.1.1.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/jquery-ui-1.9.2.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/timepicker/jquery-ui-1.10.4.custom.min.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/timepicker/jquery-ui-timepicker.min.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/timepicker/jquery-ui-touch-punch.min.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/modernizr.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/bootstrap.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/cropper/cropper.min.js"></script>
+		
+		<script type="text/javascript" src="{base_url}assets/js/template/chosen.jquery.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/jquery.cookie.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/jquery.uniform.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/flot/jquery.flot.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/flot/jquery.flot.resize.min.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/responsive-tables.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/jquery-impromptu.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/treeview/jquery.treeview.js" ></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/numeric/jquery-numeric.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/fullcalendar/fullcalendar.min.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/jquery.jgrowl.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/progressbar/jquery.progresstimer.js"></script>
+    	<script type="text/javascript" src="{base_url}assets/js/template/upload/ajaxUpload.2.0.min.js"></script>
+    	 <script type="text/javascript" src="{base_url}assets/js/template/cropper/main.js"></script>
+        <!--Archivos del sistema -->
+        <script type="text/javascript" src="{base_url}assets/js/system/inc.config.js"></script>
+        <script type="text/javascript" src="{base_url}assets/js/system/global_system.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/custom.js"></script>
+		<script type="text/javascript" src="{base_url}assets/js/template/forms.js"></script>
+
+		<!-- Customs -->
+		<script type="text/javascript" src="{base_url}assets/js/template/modal-custom.js"></script>	
+		<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="{base_url}assets/js/excanvas.min.js"></script><![endif]-->
+		<!-- Js de cada seccion -->
+		{data_js}
+	</head>
+	<body>
+		<div class="mainwrapper" >
+			<div class="header" >
+		        <div class="logo">
+		            <a href="{base_url}"><img src="{base_url}assets/images/logo.png" alt="" /></a>
+		        </div>
+		        <!--headmenu-->
+		        <div class="headerinner" >
+				    <ul class="headmenu">
+				        <li class="right">
+				            <div class="userloggedinfo">
+				                <a href="{base_url}edit_profile">
+				                	<img title="Edita tu Perfil"  src="{avatar_user}" style="cursor:pointer;max-width:80px;max-height:110px;" alt="" />
+				                </a>
+				                <img  src="{base_url}assets/avatar/{avatar_pais}" style="background:transparent;max-width:16px;max-height:16px;" />
+				                <div class="userinfo">
+				                    <h5 style="font-style:italic;">{user_name} </h5>
+				                    <ul>
+				                    	<li><small>{user_mail}</small></li>
+				                    	<li><span style="font-family:sans-serif;font-style:italic;">{user_perfil}</span>&nbsp;<span class="{icon_root} fa-lg "></span></li>
+				                        <li><span style="font-family:sans-serif;font-style:italic;">{fecha_hoy}</span></li>
+				                        <li><span style="font-family:sans-serif;font-style:italic;"><span id="liveclock"></span></span></li>
+				                        <li><a style="font-family:sans-serif;font-style:italic;"href="{base_url}logout">{close_session}</a></li>
+				                    </ul>
+				                </div>
+				            </div>
+				        </li>
+				    </ul>
+				</div>
+		        <!--headmenu-->
+		    </div>
+		    <!-- leftpanel -->
+		    <div class="leftpanel">
+		        <div class="leftmenu">        
+		            <ul class="nav nav-tabs nav-stacked">
+		            	<li class="nav-header">Navigation&nbsp;<span class="{icon_root} "></span></li>
+		            	{panel_navigate}
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- leftpanel -->
+	  		
+	  		<!--rightpanel-->
+	  		<div class="rightpanel" >
+	  			<ul class="breadcrumbs">
+	  				<li><span class="{icon_root}"></span></li>
+		            <li><a href="{base_url}"><i class="iconfa-home"></i></a>&raquo;</li>
+		            <li>{uri_string}</li>
+
+		            <li class="right" id="skin-colors">
+	                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-tint"></i> Color Skins</a>
+	                    <ul class="dropdown-menu pull-right skin-color">
+	                        <li><a href="default">Default</a></li>
+	                        <li><a href="navyblue">Navy Blue</a></li>
+	                        <li><a href="turquoise">turquoise</a></li>
+	                        <li><a href="red">Red</a></li>
+	                        <li><a href="palegreen">Pale Green</a></li>
+	                        <li><a href="brown">Brown</a></li>
+	                    </ul>
+		            </li>
+		        </ul>        

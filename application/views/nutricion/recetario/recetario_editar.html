@@ -1,0 +1,130 @@
+<div id='cropper-image'>    
+    <div id="form_recetario_editar" class="stdform stdform2"> 
+        <input id="id_receta" data-campo="id_receta" type="hidden" name="id_receta" value="{id_receta}" />
+        <div class="invoice_logo">
+            {foto_img}
+        </div>
+        <p>
+            <label>{lbl_receta}: (*)</label>
+            <span class="field">
+                <input id="txt_receta" data-campo="txt_receta" type="text" name="txt_familia" class="input-xlarge requerido" value="{value_receta}" />            
+            </span>
+        </p>
+        <p>
+            <label>{lbl_clave_corta}: (*)</label>
+            <span class="field">
+                <input id="txt_clave_corta" data-campo="txt_clave_corta" type="text" name="txt_clave_corta" class="input-xlarge requerido" value="{value_clave_corta}" />
+            </span>
+        </p>
+        <p>
+            <label>{lbl_costo_x_porcion}:</label>
+            <span class="field">
+                <input id="txt_costo_x_porcion" readonly data-campo="txt_costo_x_porcion" type="text" name="txt_costo_x_porcion" class="input-small" value="{value_costo_x_porcion}" />
+                {msg_insumos_sin_costo}
+            </span>
+        </p>
+        <p>
+            <label>{lbl_sucursal}: (*)</label>
+            <span class="field">
+                {dropdown_sucursal}
+                <span id="region" class="help-inline">{lbl_region}</span>
+                {id_sucursal}
+            </span>
+        </p>
+        <p>
+            <label>{lbl_familia}: (*)</label>
+            <span class="field">{select_familias}</span>
+        </p>
+        <p>
+            <label>{lbl_porciones}: (*)</label>
+             <span class="field">
+                <input id="txt_porciones" data-campo="txt_porciones" type="text" name="txt_porciones" class="input-small numerico requerido" value="{value_porciones}" />
+            </span>
+        </p>
+       
+        <p>
+            <label>{lbl_asignar_insumos}: </label>
+        	<span class="field">
+        		{multiselect_insumos}
+                <span id="loader_editar_porciones_insert"></span>
+        	</span>
+        </p>
+        <p></p>
+        <div id="content_porciones_insert" >
+        {cantidades_insumos}
+        </div>
+
+         <p>
+            <label>{lbl_preparacion}: </label>
+            <span class="field">
+                <textarea id="txt_preparacion" data-campo="txt_preparacion" name="txt_descripcion"  class="span5" style="resize: vertical; height: 100px;">{value_preparacion}</textarea>
+            </span>
+        </p>
+
+        <p>
+            <label>{lbl_fecha_registro}: </label>
+            <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{value_timestamp} </span></span>
+        </p>           
+        <p>
+            <label>{lbl_usuario_registro}: </label>
+            <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{value_usuarios_registro}</span></span>
+        </p>
+        <p>
+            <label>{lbl_ultima_modificacion}: </label>
+            <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{value_ultima_modificacion}</textarea></span>
+        </p>
+
+        <div id="update_loader"></div>
+        <div id="mensajes_update" style="display:none"></div>
+        <p class="stdformbutton">
+            {button_save}
+        </p>   
+</div>
+    <!-- Cropping modal -->
+    <div id="edit-image-modal"  class="modal fade modal-wide"  >
+        <div class="modal-dialog " >
+            <div class="modal-content">
+                <form class="avatar-form" action="{base_url}cropper/avatar_recetario" enctype="multipart/form-data" method="post">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1 class="modal-title" id="avatar-modal-label" >{change_avatar}</h1>
+                    </div>
+                    <div class="modal-body" style="max-height: 560px; ">
+                        <div class="avatar-body" >
+
+                            <!-- Upload image and data -->
+                            <div class="avatar-upload">
+                                <input type="hidden" class="avatar-src" name="avatar_src">
+                                <input type="hidden" class="avatar-data" name="avatar_data">
+                                <label for="avatarInput">{local_img_upload}</label>
+                                <input id="image-edit-inputfile" type="file" class="avatar-input" id="avatarInput" name="avatar_file">
+                            </div>
+
+                            <!-- Crop and preview -->
+                            <div class="row">
+                                <div class="col-md-10" >
+                                    <div class="avatar-wrapper"></div>
+                                </div>
+                               
+                            </div>
+
+                            <div class="row avatar-btns">
+                                <div class="col-md-3">
+                                    <center>
+                                        <button type="submit" style ="width:70%" class="btn btn-primary btn-block avatar-save">{save_avatar}</button>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--  modal -->
+    <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+    <input id="input_cropper" type="hidden" name="input_cropper" value="{hiddencropper}" />
+</div>  
+<script type="text/javascript" src="{base_url}assets/js/template/cropper/main.js"></script>

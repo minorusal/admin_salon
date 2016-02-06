@@ -1,0 +1,24 @@
+<div id="formulario" class="stdform stdform2">
+	<input id="id_area" type="hidden" name="id_personal" data-campo="id_personal" value="{id_personal}" />
+    <input id="id_usuario" type="hidden" name="id_usuario" data-campo="id_usuario" value="{id_usuario}" />
+	<p>{tabla}</p>
+	<p>
+        <label>{lbl_perfiles}: (*)</label>
+        <span class="field">{list_perfiles}</span>
+    </p>
+	<span class="field">
+        <div id="treeview_perfiles">
+            {tree_view}
+        </div>
+	</span>
+    <p>
+        <label>{lbl_sucursales}: (*)</label>
+        <span class="field" >{list_sucursales}</span>
+    </p>
+    
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes_update" style="display:none"></div>    
+    <p class="stdformbutton"> 
+        {button_save}
+    </p>
+</div>

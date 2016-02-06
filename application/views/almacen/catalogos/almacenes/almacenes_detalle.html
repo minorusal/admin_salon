@@ -1,0 +1,40 @@
+<div id="formulario" class="stdform stdform2">
+    <input id="id_almacen" type="hidden" name="id_almacen" value="{id_almacen}" />
+    <p>
+        <label>{nombre_almacen}: (*)</label>
+        <span class="field"><input id="almacen" type="text" name="almacen" class="input-xlarge requerido" value="{almacen}" /></span>
+    </p>
+    <p>
+        <label>{cvl_corta}: (*)</label>
+        <span class="field"><input id="clave_corta" type="text" name="clave_corta" class="input-xlarge requerido" value="{clave_corta}" /></span>
+    </p>
+    <p>
+        <label>{sucursal}: (*)</label>
+        <span class="field">{list_sucursal}</span>
+    </p>
+    <p>
+        <label>{tipo}: (*)</label>
+        <span class="field">{list_tipo}</span>
+    </p>
+    <p>
+        <label>{descrip}:</label>
+        <span class="field"><textarea id="descripcion" name="descripcion"  class="span5" style="resize: vertical; height: 100px;">{descripcion}</textarea></span>
+    </p>
+    <p>
+        <label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="fecha_registro" type="text" data-campo="fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+        <label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="usuario_regitro" type="text" data-campo="usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+        <label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+    <div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+    <p class="stdformbutton"> 
+        {button_save}
+    </p>
+</div>

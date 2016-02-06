@@ -1,0 +1,76 @@
+
+<div id="form_proveedores_save" class="stdform">
+        <p>
+            <label>{lbl_rsocial}: (*)</label>
+            <input id="rsocial" type="text" data-campo="rsocial" class="input-xlarge requerido" value="" />
+        </p>
+        <p>
+            <label>{lbl_nombre}: (*)</label>
+            <input id="nombre" type="text" data-campo="nombre" class="input-xlarge requerido" value="" />
+        </p>
+
+        <p>
+            <label>{lbl_clv}: (*)</label>
+            <input id="clave_corta" type="text" data-campo="clave_corta" class="input-large requerido" value="" />
+        </p>
+        <p>
+            <label>{lbl_rfc}: (*)</label>
+            <input id="rfc" type="text" data-campo="rfc" class="input-large requerido" value="" />
+        </p>
+        <p>
+            <label>{lbl_calle}:</label>
+           <input id="calle" type="text" data-campo="calle" class="input-large " value="" />
+        </p>
+        <p>
+            <label>{lbl_num_int}: </label>
+            <input id="num_int" type="text" data-campo="num_int" class="input-small " value="" />
+        </p>
+        <p>
+            <label>{lbl_num_ext}:</label>
+            <input id="num_ext" type="text" data-campo="num_ext" class="input-small " value="" />
+        </p>
+        <p>
+            <label>{lbl_colonia}: </label>
+            <input id="colonia" type="text" data-campo="colonia" class="input-large " value="" />
+        </p>
+        <p>
+            <label>{lbl_municipio}:</label>
+            <input id="municipio" type="text" data-campo="municipio" class="input-large " value="" />
+        </p>
+        <p>
+            <label>{lbl_region} (*)</label>
+            {dropdown_region}
+        </p>
+        <p>
+            <label>{lbl_entidad} (*)</label>
+            {dropdown_entidad}
+        </p>
+        <p>
+            <label>{lbl_cp}: </label>
+            <input id="cp" type="text" data-campo="cp" class="input-small " value="" />
+        </p>
+        <p>
+            <label>{lbl_telefono}: </label>
+            <input id="telefono" type="text" data-campo="telefono" class="input-large numerico" value="" />
+        </p>
+        <p>
+            <label>{lbl_email} (*): </label>
+            <input id="email" type="text" data-campo="email" class="input-large " value="" />
+        </p>
+        <p>
+            <label>{lbl_contacto}: </label>
+            <input id="contacto" type="text" data-campo="contacto" class="input-xlarge " value="" />
+        </p>
+        <p>
+            <label>{lbl_comentario}: </label>
+             <textarea id="comentario" data-campo="comentario"  class="span5" style="resize: vertical; height: 100px;"></textarea>
+        </p>
+    
+    <div id="loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+    
+    <p class="stdformbutton"> 
+        {button_save}
+        {button_reset}
+    </p>
+</div>

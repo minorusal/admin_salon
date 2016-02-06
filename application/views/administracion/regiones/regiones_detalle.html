@@ -1,0 +1,36 @@
+<div id="formulario" class="stdform stdform2">
+	<input type="hidden" id="id_region" name="id_region" data-campo="id_region" value="{id_region}">
+	<p>
+		<label>{lbl_region} (*)</label>
+		<span class="field"><input type="text" id="txt_region" name="txt_region" data-campo="txt_region" class="input-xlarge requerido" value="{txt_region}" /> </span>
+	</p>
+	<p>
+		<label>{lbl_clave_corta} (*)</label>
+		<span class="field"><input type="text" id="txt_clave_corta" name="txt_clave_corta" data-campo="txt_clave_corta" class="input-xlargue requerido" value="{txt_clave_corta}" /></span>
+	</p>
+    <p>
+        <label>{lbl_descripcion}: </label>
+        <span class="field"><textarea id="txt_descripcion" name="txt_descripcion" data-campo="txt_descripcion" class="span5" style="resize: vertical; height: 100px;">{txt_descripcion}</textarea></span>
+    </p>
+	<p>
+        <label>{lbl_entidades}: (*)</label>
+        {list_entidad}
+    </p>
+	<p>
+		<label>{lbl_fecha_registro}: </label>
+        <span class="field"><span id="txt_fecha_registro" type="text" data-campo="txt_fecha_registro" class="input-xlarge uneditable-input" readonly >{val_fecha_registro} </span></span>
+    </p>           
+    <p>
+    	<label>{lbl_usuario_registro}: </label>
+        <span class="field"><span id="txt_usuario_regitro" type="text" data-campo="txt_usuario_regitro" class="input-xlarge uneditable-input" readonly >{val_usuarios_registro}</span></span>
+    </p>
+    <p>
+    	<label>{lbl_ultima_modificacion}: </label>
+        <span class="field"><textarea id="ultima_modificacion" class="span5 textareaUneditable" style="resize: vertical; height: 100px;" readonly  >{val_ultima_modificacion}</textarea></span>
+    </p>
+	<div id="update_loader" ></div>
+    <div id="mensajes_update" style="display:none"></div>
+	<p class="stdformbutton">
+		{button_save}
+	</p>
+</div>

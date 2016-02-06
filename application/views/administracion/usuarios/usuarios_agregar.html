@@ -1,0 +1,50 @@
+
+<div id="formulario" class="stdform stdform2">
+    <p>
+        <label>{lbl_nombre}: (*)</label>
+        <span class="field"><input id="txt_nombre" type="text" name="txt_nombre" data-campo="txt_nombre" class="input-large requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_paterno}: (*)</label>
+        <span class="field"><input id="txt_paterno" type="text" name="txt_paterno" data-campo="txt_paterno" class="input-large requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_materno}: (*)</label>
+        <span class="field"><input id="txt_materno" type="text" name="txt_materno" data-campo="txt_materno" class="input-large requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_telefono}:</label>
+        <span class="field"><input id="txt_telefono" type="text" name="txt_telefono" data-campo="txt_telefono" class="input-large  numerico" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_email}: (*)</label>
+        <span class="field"><input id="txt_mail" type="text" name="txt_mail" data-campo="txt_mail" class="input-large requerido" value="" /></span>
+    </p>
+    <p>
+        <label>{lbl_sucursal}: (*)</label>
+        <span class="field">{dropdown_sucursal}</span>
+    </p>
+    <p>
+        <label>{lbl_area}: (*)</label>
+        <span class="field">{dropdown_area}</span>
+    </p>
+    <p>
+        <label>{lbl_puesto}: (*)</label>
+        <span class="field">{dropdown_puesto}</span>
+    </p>
+    <p>
+        <label>{lbl_perfil}: (*)</label>
+        <span class="field">{dropdown_perfil}</span>
+    </p>
+     <span class="field"><div id="treeview_perfiles" style="display:none">
+       {tree_view}
+    </div></span>
+    <div id="registro_loader" class="progress progress-striped" style="display:none;"></div>
+    <div id="mensajes" style="display:none"></div>
+    <p class="stdformbutton">
+        {button_save}
+        {button_reset}
+    </p>  
+    
+</div>
+
